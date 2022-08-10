@@ -1,0 +1,288 @@
+{
+    "detail": true,
+    "data": {
+        "fields": [
+            {
+                "system_name": "rating",
+                "display_name": "Rating",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "date",
+                "display_name": "Date",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "motivation",
+                "display_name": "Motivation",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            }
+        ],
+        "permissions": {
+            "get": [
+                "__all__.global_admin",
+                "__all__.anonymous"
+            ],
+            "post": [
+                "__all__.global_admin"
+            ],
+            "put": [
+                "__all__.global_admin"
+            ],
+            "delete": [
+                "__all__.global_admin"
+            ]
+        }
+    },
+    "display": {
+        "title": "$ri_film_censorship->$title ($date) $||$ $ri_episode_censorship->$title ($date)",
+        "layout": [
+            {
+                "label": "General",
+                "fields": [
+                    {
+                        "field": "$rating"
+                    },
+                    {
+                        "field": "$date"
+                    },
+                    {
+                        "field": "$motivation"
+                    }
+                ]
+            }
+        ]
+    },
+    "es_data": {
+        "fields": [
+            {
+                "system_name": "title",
+                "display_name": "Film or episode Title",
+                "selector_value": "$ri_film_censorship->$title $||$ $ri_episode_censorship->$title",
+                "type": "text"
+            },
+            {
+                "system_name": "mentioned_titles",
+                "display_name": "Film or episode mentioned titles",
+                "selector_value": "$ri_film_censorship->$r_mentioned_film_title->$title",
+                "type": "[text]"
+            },
+            {
+                "system_name": "rating",
+                "display_name": "Rating",
+                "selector_value": "$rating",
+                "type": "text"
+            },
+            {
+                "system_name": "date",
+                "display_name": "Date",
+                "selector_value": "$date",
+                "type": "edtf"
+            },
+            {
+                "system_name": "appeal",
+                "display_name": "Appeal",
+                "base": "$r_censorship_appeal",
+                "parts": {
+                    "id": {
+                        "selector_value": "$r_censorship_appeal->$id",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "selector_value": "$r_censorship_appeal->$ri_film_censorship->$r_mentioned_film_title->$title $r_censorship_appeal->$date",
+                        "type": "text"
+                    }
+                },
+                "type": "nested"
+            },
+            {
+                "system_name": "motivation",
+                "display_name": "Motivation",
+                "selector_value": "$motivation",
+                "type": "text"
+            },
+            {
+                "system_name": "cut",
+                "display_name": "Cut",
+                "base": "$r_censorship_cut",
+                "parts": {
+                    "id": {
+                        "selector_value": "$r_censorship_cut->$id",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "selector_value": "$r_censorship_cut->$r_censorship_cut_category->$name $r_censorship_cut->$date",
+                        "type": "text"
+                    }
+                },
+                "type": "nested"
+            },
+            {
+                "system_name": "cut_category",
+                "display_name": "Cut reason category",
+                "base": "$r_censorship_cut->$r_censorship_cut_category",
+                "parts": {
+                    "id": {
+                        "selector_value": "$r_censorship_cut->$r_censorship_cut_category->$id",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "selector_value": "$r_censorship_cut->$r_censorship_cut_category->$name",
+                        "type": "text"
+                    }
+                },
+                "type": "nested"
+            },
+            {
+                "system_name": "cut_main_category",
+                "display_name": "Cut reason main category",
+                "base": "$r_censorship_cut->$r_censorship_cut_category->$r_censorship_cut_main_category",
+                "parts": {
+                    "id": {
+                        "selector_value": "$r_censorship_cut->$r_censorship_cut_category->$r_censorship_cut_main_category->$id",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "selector_value": "$r_censorship_cut->$r_censorship_cut_category->$r_censorship_cut_main_category->$name",
+                        "type": "text"
+                    }
+                },
+                "type": "nested"
+            },
+            {
+                "system_name": "cut_comment_nl",
+                "display_name": "Cut comment by censor (Dutch)",
+                "selector_value": "$r_censorship_cut->$comment_nl",
+                "type": "text"
+            },
+            {
+                "system_name": "cut_comment_fr",
+                "display_name": "Cut comment by censor (French)",
+                "selector_value": "$r_censorship_cut->$comment_fr",
+                "type": "text"
+            }
+        ],
+        "permissions": {
+            "index": [
+                "__all__.global_admin"
+            ]
+        }
+    },
+    "es_display": {
+        "title": "Search censorship data",
+        "filters": [
+            {
+                "filters": [
+                    {
+                        "filter": "$title",
+                        "type": "autocomplete"
+                    },
+                    {
+                        "filter": "$mentioned_titles",
+                        "type": "autocomplete"
+                    },
+                    {
+                        "filter": "$rating",
+                        "type": "dropdown"
+                    },
+                    {
+                        "filter": "$date",
+                        "type": "histogram_slider",
+                        "interval": 10
+                    },
+                    {
+                        "filter": "$appeal",
+                        "type": "nested_present"
+                    },
+                    {
+                        "filter": "$motivation",
+                        "type": "autocomplete"
+                    },
+                    {
+                        "filter": "$cut_category"
+                    },
+                    {
+                        "filter": "$cut_main_category"
+                    },
+                    {
+                        "filter": "$cut_comment_nl",
+                        "type": "autocomplete"
+                    },
+                    {
+                        "filter": "$cut_comment_fr",
+                        "type": "autocomplete"
+                    }
+                ]
+            }
+        ],
+        "columns": [
+            {
+                "column": "$title",
+                "sortable": true,
+                "main_link": true
+            },
+            {
+                "column": "$rating",
+                "sortable": true
+            },
+            {
+                "column": "$date",
+                "sortable": true
+            },
+            {
+                "column": "$appeal",
+                "sortable": true,
+                "link": true
+            },
+            {
+                "column": "$cut_category",
+                "sortable": true
+            }
+        ]
+    }
+}

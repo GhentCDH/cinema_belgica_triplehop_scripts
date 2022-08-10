@@ -1,0 +1,355 @@
+{
+    "detail": true,
+    "source": true,
+    "data": {
+        "fields": [
+            {
+                "system_name": "editorial_comment",
+                "display_name": "Editorial comment",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "isbn",
+                "display_name": "ISBN",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "issn",
+                "display_name": "ISSN",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "title",
+                "display_name": "Title",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "publication_date",
+                "display_name": "Publication date",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "publication_volume",
+                "display_name": "Publication volume",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "publication_number",
+                "display_name": "Publication number",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "authors",
+                "display_name": "Author(s)",
+                "type": "[String]",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "editors",
+                "display_name": "Editor(s)",
+                "type": "[String]",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "place",
+                "display_name": "Place",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "publisher",
+                "display_name": "Publisher",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "start_page",
+                "display_name": "Start page",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "end_page",
+                "display_name": "End page",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "url",
+                "display_name": "URL",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            }
+        ],
+        "permissions": {
+            "get": [
+                "__all__.global_admin",
+                "__all__.anonymous"
+            ],
+            "post": [
+                "__all__.global_admin"
+            ],
+            "put": [
+                "__all__.global_admin"
+            ],
+            "delete": [
+                "__all__.global_admin"
+            ]
+        }
+    },
+    "display": {
+        "title": "$title ($publication_date)",
+        "layout": [
+            {
+                "fields": [
+                    {
+                        "field": "$title"
+                    },
+                    {
+                        "field": "$publication_date"
+                    },
+                    {
+                        "field": "$publication_volume"
+                    },
+                    {
+                        "field": "$publication_number"
+                    },
+                    {
+                        "field": "$authors",
+                        "type": "list"
+                    },
+                    {
+                        "field": "$editors",
+                        "type": "list"
+                    },
+                    {
+                        "field": "$r_publication_publication_type->$type",
+                        "label": "Publication type"
+                    },
+                    {
+                        "field": "$isbn"
+                    },
+                    {
+                        "field": "$issn"
+                    },
+                    {
+                        "field": "$place"
+                    },
+                    {
+                        "field": "$publisher"
+                    },
+                    {
+                        "field": "$url",
+                        "type": "link"
+                    },
+                    {
+                        "field": "$editorial_comment"
+                    }
+                ]
+            }
+        ]
+    }
+}

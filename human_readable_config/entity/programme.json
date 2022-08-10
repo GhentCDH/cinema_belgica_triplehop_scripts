@@ -1,0 +1,332 @@
+{
+    "detail": true,
+    "data": {
+        "fields": [
+            {
+                "system_name": "vooruit_image",
+                "display_name": "Announcement in \"Vooruit\"",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "gross_income",
+                "display_name": "Gross income",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "number_of_tickets",
+                "display_name": "Number of tickets",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "mean_price",
+                "display_name": "Mean price",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "taxes_and_copyrights",
+                "display_name": "Taxes and copyrights",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "net_income",
+                "display_name": "Net income",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "cheapest_ticket",
+                "display_name": "Cheapest ticket",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "most_expensive_ticket",
+                "display_name": "Most expensive ticket",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            }
+        ],
+        "permissions": {
+            "get": [
+                "__all__.global_admin",
+                "__all__.anonymous"
+            ],
+            "post": [
+                "__all__.global_admin"
+            ],
+            "put": [
+                "__all__.global_admin"
+            ],
+            "delete": [
+                "__all__.global_admin"
+            ]
+        }
+    },
+    "display": {
+        "title": "$r_programme_venue->$name ($r_programme_programme_date->$date_start - $r_programme_programme_date->$date_end)",
+        "layout": [
+            {
+                "label": "General",
+                "fields": [
+                    {
+                        "label": "Start date",
+                        "field": "$r_programme_programme_date->$date_start"
+                    },
+                    {
+                        "label": "End date",
+                        "field": "$r_programme_programme_date->$date_end"
+                    },
+                    {
+                        "label": "Mentioned dates",
+                        "field": "$r_programme_programme_date->$dates_mentioned",
+                        "type": "list"
+                    }
+                ]
+            },
+            {
+                "label": "Box office",
+                "fields": [
+                    {
+                        "field": "$gross_income"
+                    },
+                    {
+                        "field": "$number_of_tickets"
+                    },
+                    {
+                        "field": "$mean_price"
+                    },
+                    {
+                        "field": "$taxes_and_copyrights"
+                    },
+                    {
+                        "field": "$net_income"
+                    },
+                    {
+                        "field": "$cheapest_ticket"
+                    },
+                    {
+                        "field": "$most_expensive_ticket"
+                    }
+                ]
+            }
+        ],
+        "permissions": {
+            "index": [
+                "__all__.global_admin"
+            ]
+        }
+    },
+    "es_data": {
+        "fields": [
+            {
+                "system_name": "venue",
+                "display_name": "Venue",
+                "base": "$r_programme_venue",
+                "parts": {
+                    "id": {
+                        "selector_value": "$r_programme_venue->$id",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "selector_value": "$r_programme_venue->$name",
+                        "type": "text"
+                    }
+                },
+                "type": "nested"
+            },
+            {
+                "system_name": "date",
+                "display_name": "Date",
+                "type": "edtf_interval",
+                "start": "$r_programme_programme_date->$date_start",
+                "end": "$r_programme_programme_date->$date_end"
+            },
+            {
+                "system_name": "film",
+                "display_name": "Films",
+                "base": "$r_programme_programme_item->$r_programme_item_film",
+                "parts": {
+                    "id": {
+                        "selector_value": "$r_programme_programme_item->$r_programme_item_film->$id",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "selector_value": "$r_programme_programme_item->$r_programme_item_film->$title",
+                        "type": "text"
+                    }
+                },
+                "type": "nested"
+            }
+        ],
+        "permissions": {
+            "index": [
+                "__all__.global_admin"
+            ]
+        }
+    },
+    "es_display": {
+        "title": "Search programmes",
+        "filters": [
+            {
+                "filters": [
+                    {
+                        "filter": "$venue"
+                    },
+                    {
+                        "filter": "$date",
+                        "type": "histogram_slider",
+                        "interval": 10
+                    },
+                    {
+                        "filter": "$film",
+                        "type": "nested"
+                    }
+                ]
+            }
+        ],
+        "columns": [
+            {
+                "column": "$date",
+                "display_name": "Start date",
+                "sub_field": "start",
+                "sub_field_type": "edtf",
+                "sortable": true,
+                "main_link": true
+            },
+            {
+                "column": "$date",
+                "display_name": "End date",
+                "sub_field": "end",
+                "sub_field_type": "edtf",
+                "sortable": true
+            },
+            {
+                "column": "$venue",
+                "sortable": true,
+                "link": true
+            },
+            {
+                "column": "$film",
+                "sortable": true,
+                "link": true
+            }
+        ]
+    }
+}

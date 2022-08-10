@@ -1,0 +1,41 @@
+{
+    "data": {
+        "fields": [
+            {
+                "system_name": "name",
+                "display_name": "Name",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            }
+        ],
+        "permissions": {
+            "get": [
+                "__all__.global_admin",
+                "__all__.anonymous"
+            ],
+            "post": [
+                "__all__.global_admin"
+            ],
+            "put": [
+                "__all__.global_admin"
+            ],
+            "delete": [
+                "__all__.global_admin"
+            ]
+        }
+    }
+}

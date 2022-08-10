@@ -1,0 +1,102 @@
+{
+    "data": {
+        "fields": [
+            {
+                "system_name": "subsidiary_type",
+                "display_name": "Subsidiary type",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "date_start",
+                "display_name": "Start date",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "date_end",
+                "display_name": "End date",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            }
+        ],
+        "permissions": {
+            "get": [
+                "__all__.global_admin",
+                "__all__.anonymous"
+            ],
+            "post": [
+                "__all__.global_admin"
+            ],
+            "put": [
+                "__all__.global_admin"
+            ],
+            "delete": [
+                "__all__.global_admin"
+            ]
+        }
+    },
+    "display": {
+        "domain_title": "Subsidiary",
+        "range_title": "Subsidiary of",
+        "layout": [
+            {
+                "fields": [
+                    {
+                        "field": "$subsidiary_type"
+                    },
+                    {
+                        "field": "$date_start",
+                        "type": "edtf"
+                    },
+                    {
+                        "field": "$date_end",
+                        "type": "edtf"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "detail": true,
+    "data": {
+        "fields": [
+            {
+                "system_name": "name",
+                "display_name": "Name",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "postal_code",
+                "display_name": "Postal code",
+                "type": "Int",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            }
+        ],
+        "permissions": {
+            "get": [
+                "__all__.global_admin",
+                "__all__.anonymous"
+            ],
+            "post": [
+                "__all__.global_admin"
+            ],
+            "put": [
+                "__all__.global_admin"
+            ],
+            "delete": [
+                "__all__.global_admin"
+            ]
+        }
+    },
+    "display": {
+        "title": "$name",
+        "layout": [
+            {
+                "fields": [
+                    {
+                        "field": "$name"
+                    },
+                    {
+                        "field": "$postal_code"
+                    }
+                ]
+            }
+        ]
+    }
+}

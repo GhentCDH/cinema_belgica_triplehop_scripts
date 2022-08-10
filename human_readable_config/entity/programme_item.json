@@ -1,0 +1,119 @@
+{
+    "detail": true,
+    "data": {
+        "fields": [
+            {
+                "system_name": "mentioned_venue",
+                "display_name": "Mentioned venue name",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "official_rating",
+                "display_name": "Official rating",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "catholic_rating",
+                "display_name": "Catholic rating",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "catholic_rating_extra",
+                "display_name": "Additional information related to the catholic rating",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            }
+        ],
+        "permissions": {
+            "get": [
+                "__all__.global_admin",
+                "__all__.anonymous"
+            ],
+            "post": [
+                "__all__.global_admin"
+            ],
+            "put": [
+                "__all__.global_admin"
+            ],
+            "delete": [
+                "__all__.global_admin"
+            ]
+        }
+    },
+    "display": {
+        "title": "$r_programme_item_mentioned_film_title->$title - $ri_programme_programme_item->$r_programme_venue->$name ($ri_programme_programme_item->$r_programme_programme_date->$date_start - $ri_programme_programme_item->$r_programme_programme_date->$date_end)",
+        "layout": [
+            {
+                "label": "General",
+                "fields": [
+                    {
+                        "label": "Mentioned film title",
+                        "field": "$r_programme_item_mentioned_film_title->$title"
+                    },
+                    {
+                        "field": "$mentioned_venue"
+                    }
+                ]
+            }
+        ]
+    }
+}

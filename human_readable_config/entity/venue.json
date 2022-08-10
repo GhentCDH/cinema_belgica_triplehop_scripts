@@ -1,0 +1,411 @@
+{
+    "detail": true,
+    "data": {
+        "fields": [
+            {
+                "system_name": "original_id",
+                "display_name": "Original id",
+                "type": "Int",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "name",
+                "display_name": "Name",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "date_opened",
+                "display_name": "Date opened",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "date_closed",
+                "display_name": "Date closed",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "status",
+                "display_name": "Status",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "type",
+                "display_name": "Type",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "ideological_characteristic",
+                "display_name": "Ideological characteristic",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "ideological_remark",
+                "display_name": "Ideological remark",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "infrastructure_info",
+                "display_name": "Infrastructure info",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "name_remarks",
+                "display_name": "Remarks about the name",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "screens",
+                "display_name": "Number of screens",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "seats",
+                "display_name": "Number of seats",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            }
+        ],
+        "permissions": {
+            "get": [
+                "__all__.global_admin",
+                "__all__.anonymous"
+            ],
+            "post": [
+                "__all__.global_admin"
+            ],
+            "put": [
+                "__all__.global_admin"
+            ],
+            "delete": [
+                "__all__.global_admin"
+            ]
+        }
+    },
+    "display": {
+        "title": "$name ($r_address->$r_address_city->$name)",
+        "layout": [
+            {
+                "fields": [
+                    {
+                        "field": "$name"
+                    },
+                    {
+                        "field": "$date_opened",
+                        "type": "edtf_year"
+                    },
+                    {
+                        "field": "$date_closed",
+                        "type": "edtf_year"
+                    },
+                    {
+                        "field": "$status"
+                    },
+                    {
+                        "field": "$type"
+                    },
+                    {
+                        "field": "$ideological_characteristic"
+                    },
+                    {
+                        "field": "$ideological_remark"
+                    },
+                    {
+                        "field": "$infrastructure_info"
+                    },
+                    {
+                        "field": "$name_remarks"
+                    },
+                    {
+                        "field": "$screens",
+                        "type": "table"
+                    },
+                    {
+                        "field": "$seats",
+                        "type": "table"
+                    }
+                ]
+            }
+        ],
+        "permissions": {
+            "index": [
+                "__all__.global_admin"
+            ]
+        }
+    },
+    "es_data": {
+        "fields": [
+            {
+                "system_name": "name",
+                "display_name": "Name",
+                "selector_value": "$name",
+                "type": "text"
+            },
+            {
+                "system_name": "city",
+                "display_name": "City",
+                "base": "$r_address->$r_address_city",
+                "parts": {
+                    "id": {
+                        "selector_value": "$r_address->$r_address_city->$id",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "selector_value": "$r_address->$r_address_city->$name",
+                        "type": "text"
+                    }
+                },
+                "type": "nested"
+            },
+            {
+                "system_name": "street_name",
+                "display_name": "Street name",
+                "selector_value": "$r_address->$street_name",
+                "type": "text"
+            },
+            {
+                "system_name": "date",
+                "display_name": "Date",
+                "type": "edtf_interval",
+                "start": "$date_opened",
+                "end": "$date_closed"
+            }
+        ],
+        "permissions": {
+            "index": [
+                "__all__.global_admin"
+            ]
+        }
+    },
+    "es_display": {
+        "title": "Search venues",
+        "filters": [
+            {
+                "filters": [
+                    {
+                        "filter": "$name",
+                        "type": "autocomplete"
+                    },
+                    {
+                        "filter": "$city"
+                    },
+                    {
+                        "filter": "$street_name",
+                        "type": "autocomplete"
+                    },
+                    {
+                        "filter": "$date",
+                        "type": "histogram_slider",
+                        "interval": 10
+                    }
+                ]
+            }
+        ],
+        "columns": [
+            {
+                "column": "$name",
+                "sortable": true,
+                "main_link": true
+            },
+            {
+                "column": "$city",
+                "sortable": true
+            },
+            {
+                "column": "$street_name",
+                "sortable": true
+            },
+            {
+                "column": "$date",
+                "display_name": "Date opened",
+                "sub_field": "start",
+                "sub_field_type": "edtf",
+                "sortable": true
+            },
+            {
+                "column": "$date",
+                "display_name": "Date closed",
+                "sub_field": "end",
+                "sub_field_type": "edtf",
+                "sortable": true
+            }
+        ]
+    }
+}

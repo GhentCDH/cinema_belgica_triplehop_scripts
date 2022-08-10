@@ -1,0 +1,72 @@
+{
+    "data": {
+        "fields": [
+            {
+                "system_name": "type",
+                "display_name": "Job type",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            }
+        ],
+        "permissions": {
+            "get": [
+                "__all__.global_admin",
+                "__all__.anonymous"
+            ],
+            "post": [
+                "__all__.global_admin"
+            ],
+            "put": [
+                "__all__.global_admin"
+            ],
+            "delete": [
+                "__all__.global_admin"
+            ]
+        }
+    },
+    "display": {
+        "domain_title": "People",
+        "range_title": "Films",
+        "layout": [
+            {
+                "fields": [
+                    {
+                        "field": "$type"
+                    }
+                ]
+            }
+        ]
+    },
+    "edit": {
+        "domain_title": "Person(s)",
+        "range_title": "Film(s)",
+        "layout": [
+            {
+                "fields": [
+                    {
+                        "field": "$type",
+                        "type": "dropdown",
+                        "options": [
+                            "actor",
+                            "director"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

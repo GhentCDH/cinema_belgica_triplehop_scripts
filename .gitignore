@@ -1,0 +1,9 @@
+*.pyc
+
+config.py
+
+config/*
+data/*
+
+human_readable_config/groups.json
+human_readable_config/relations.json

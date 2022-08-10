@@ -1,0 +1,267 @@
+{
+    "detail": true,
+    "data": {
+        "fields": [
+            {
+                "system_name": "name",
+                "display_name": "Name",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "date_start",
+                "display_name": "Start date",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "date_end",
+                "display_name": "End date",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "info",
+                "display_name": "Info",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "nature",
+                "display_name": "Nature",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            }
+        ],
+        "permissions": {
+            "get": [
+                "__all__.global_admin",
+                "__all__.anonymous"
+            ],
+            "post": [
+                "__all__.global_admin"
+            ],
+            "put": [
+                "__all__.global_admin"
+            ],
+            "delete": [
+                "__all__.global_admin"
+            ]
+        }
+    },
+    "display": {
+        "title": "$name",
+        "layout": [
+            {
+                "label": "General",
+                "fields": [
+                    {
+                        "field": "$name"
+                    },
+                    {
+                        "field": "$date_start",
+                        "type": "edtf"
+                    },
+                    {
+                        "field": "$date_end",
+                        "type": "edtf"
+                    },
+                    {
+                        "field": "$info"
+                    },
+                    {
+                        "field": "$nature"
+                    }
+                ]
+            }
+        ],
+        "permissions": {
+            "index": [
+                "__all__.global_admin"
+            ]
+        }
+    },
+    "es_data": {
+        "fields": [
+            {
+                "system_name": "name",
+                "display_name": "Name",
+                "selector_value": "$name",
+                "type": "text"
+            },
+            {
+                "system_name": "date",
+                "display_name": "Date",
+                "type": "edtf_interval",
+                "start": "$date_start",
+                "end": "$date_end"
+            },
+            {
+                "system_name": "function",
+                "display_name": "Functions",
+                "selector_value": "$ri_film_company->$display_name $ri_film_company.$type",
+                "type": "[text]"
+            },
+            {
+                "system_name": "venue",
+                "display_name": "Venues",
+                "base": "$ri_venue_company",
+                "parts": {
+                    "id": {
+                        "selector_value": "$ri_venue_company->$id",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "selector_value": "$ri_venue_company->$name",
+                        "type": "text"
+                    }
+                },
+                "type": "nested"
+            },
+            {
+                "system_name": "film",
+                "display_name": "Films",
+                "base": "$ri_film_company",
+                "parts": {
+                    "id": {
+                        "selector_value": "$ri_film_company->$id",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "selector_value": "$ri_film_company->$title",
+                        "type": "text"
+                    }
+                },
+                "type": "nested"
+            }
+        ],
+        "permissions": {
+            "index": [
+                "__all__.global_admin"
+            ]
+        }
+    },
+    "es_display": {
+        "title": "Search companies",
+        "filters": [
+            {
+                "filters": [
+                    {
+                        "filter": "$name",
+                        "type": "autocomplete"
+                    },
+                    {
+                        "filter": "$function",
+                        "type": "dropdown"
+                    },
+                    {
+                        "filter": "$venue"
+                    },
+                    {
+                        "filter": "$film"
+                    },
+                    {
+                        "filter": "$date",
+                        "type": "histogram_slider",
+                        "interval": 10
+                    }
+                ]
+            }
+        ],
+        "columns": [
+            {
+                "column": "$name",
+                "sortable": true,
+                "main_link": true
+            },
+            {
+                "column": "$function",
+                "sortable": true
+            },
+            {
+                "column": "$date",
+                "display_name": "Start date",
+                "sub_field": "start",
+                "sub_field_type": "edtf",
+                "sortable": true
+            },
+            {
+                "column": "$date",
+                "display_name": "End date",
+                "sub_field": "end",
+                "sub_field_type": "edtf",
+                "sortable": true
+            }
+        ]
+    }
+}

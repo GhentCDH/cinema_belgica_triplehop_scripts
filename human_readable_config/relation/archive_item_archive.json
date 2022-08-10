@@ -1,0 +1,23 @@
+{
+    "display": {
+        "domain_title": "Archive",
+        "range_title": "Archive item"
+    },
+    "data": {
+        "permissions": {
+            "get": [
+                "__all__.global_admin",
+                "__all__.anonymous"
+            ],
+            "post": [
+                "__all__.global_admin"
+            ],
+            "put": [
+                "__all__.global_admin"
+            ],
+            "delete": [
+                "__all__.global_admin"
+            ]
+        }
+    }
+}

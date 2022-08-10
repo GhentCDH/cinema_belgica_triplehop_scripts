@@ -1,0 +1,54 @@
+{
+    "data": {
+        "fields": [
+            {
+                "system_name": "number",
+                "display_name": "Number",
+                "type": "Int",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            }
+        ],
+        "permissions": {
+            "get": [
+                "__all__.global_admin",
+                "__all__.anonymous"
+            ],
+            "post": [
+                "__all__.global_admin"
+            ],
+            "put": [
+                "__all__.global_admin"
+            ],
+            "delete": [
+                "__all__.global_admin"
+            ]
+        }
+    },
+    "display": {
+        "domain_title": "Films",
+        "range_title": "Episode",
+        "layout": [
+            {
+                "fields": [
+                    {
+                        "field": "$number"
+                    }
+                ]
+            }
+        ]
+    }
+}
