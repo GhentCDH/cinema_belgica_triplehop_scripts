@@ -243,13 +243,9 @@
                         "type": "filmmagie"
                     },
                     {
-                        "field": "$length $length_unit",
-                        "label": "Length"
-                    },
-                    {
-                        "field": "$r_film_country->$name",
-                        "label": "Countries",
-                        "type": "list"
+                        "field": "$ri_programme_item_film->$ri_programme_programme_item->$vooruit_image",
+                        "label": "Announcement in \"Vooruit\"",
+                        "type": "vooruit_image"
                     },
                     {
                         "field": "$city_archive_manifest",
@@ -258,6 +254,15 @@
                     {
                         "field": "$university_library_manifest",
                         "type": "iiif-manifest"
+                    },
+                    {
+                        "field": "$length $length_unit",
+                        "label": "Length"
+                    },
+                    {
+                        "field": "$r_film_country->$name",
+                        "label": "Countries",
+                        "type": "list"
                     }
                 ]
             }
