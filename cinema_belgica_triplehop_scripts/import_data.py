@@ -159,7 +159,7 @@ async def create_data(data_actions: typing.List[str] = None):
             project_name="cinema_belgica",
             username="cinema_belgica",
             conf={
-                "filename": "clean/tblFilm.csv",
+                "filename": "processed/tblFilmsWithManifestUrls.csv",
                 "entity_type_name": "film",
                 "props": {
                     "id": ["int", "film_id"],
@@ -170,6 +170,8 @@ async def create_data(data_actions: typing.List[str] = None):
                     "filmmagie_id": ["[string]", "kadoc_id", "|"],
                     "length": ["string", "film_length"],
                     "length_unit": ["string", "film_length_unit"],
+                    "city_archive_manifest": ["string", "ca_manifest_url"],
+                    "university_library_manifest": ["string", "ub_manifest_url"],
                 },
             },
             lookups=lookups,
@@ -371,6 +373,7 @@ async def create_data(data_actions: typing.List[str] = None):
                 "props": {
                     "id": ["int", "programme_id"],
                     "vooruit_image": ["string", "vooruit_image_url"],
+                    "city_archive_manifest": ["string", "ca_manifest_url"],
                     "gross_income": ["string", "gross_income"],
                     "number_of_tickets": ["string", "number_of_tickets"],
                     "mean_price": ["string", "mean_price"],
@@ -646,7 +649,7 @@ async def create_data(data_actions: typing.List[str] = None):
             project_name="cinema_belgica",
             username="cinema_belgica",
             conf={
-                "filename": "clean/tblFilm.csv",
+                "filename": "processed/tblFilmsWithManifestUrls.csv",
                 "relation_type_name": "film_country",
                 "domain_type_name": "film",
                 "range_type_name": "country",

@@ -147,6 +147,46 @@
                         "__all__.global_admin"
                     ]
                 }
+            },
+            {
+                "system_name": "city_archive_manifest",
+                "display_name": "Poster from Archief Gent",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
+                "system_name": "university_library_manifest",
+                "display_name": "Poster from Ghent University Library",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
             }
         ],
         "permissions": {
@@ -210,6 +250,14 @@
                         "field": "$r_film_country->$name",
                         "label": "Countries",
                         "type": "list"
+                    },
+                    {
+                        "field": "$city_archive_manifest",
+                        "type": "iiif-manifest"
+                    },
+                    {
+                        "field": "$university_library_manifest",
+                        "type": "iiif-manifest"
                     }
                 ]
             }

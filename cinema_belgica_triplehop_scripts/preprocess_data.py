@@ -137,8 +137,9 @@ def main(action: typing.List[str] = typer.Option(None)):
                 for f in os.listdir(f"{d}/datasets/sources_input"):
                     if os.path.isfile(f"{d}/datasets/sources_input/{f}"):
                         files.append(f"datasets/sources_input/{f}")
-                if os.path.isfile(os.path.join(d, "images/programmes_image_urls.csv")):
-                    files.append("images/programmes_image_urls.csv")
+                for f in os.listdir(f"{d}/images"):
+                    if os.path.isfile(f"{d}/images/{f}"):
+                        files.append(f"images/{f}")
             for f in files:
                 os.remove(os.path.join(d, f))
 
@@ -172,9 +173,68 @@ def main(action: typing.List[str] = typer.Option(None)):
                 and os.path.splitext(f)[1] == ".csv"
             ]
         )
-        files.append("images/programmes_image_urls.csv")
+        files.extend(
+            [
+                f"images/{f}"
+                for f in os.listdir("data/original/images")
+                if os.path.isfile(f"data/original/images/{f}")
+                and os.path.splitext(f)[1] == ".csv"
+            ]
+        )
         for filename in files:
             fix_data(filename, configs.get(filename, {}))
+
+    if not action or "films" in action:
+        print("Preprocessing films")
+        # add city archive manifest urls to film
+        # add university library manifest urls to film
+        with open("data/clean/tblFilm.csv") as input_file, open(
+            "data/clean/images/films_city_archive_manifests.csv"
+        ) as ca_file, open(
+            "data/clean/images/films_ub_manifest_image_urls.csv"
+        ) as ub_file, open(
+            "data/processed/tblFilmsWithManifestUrls.csv", "w"
+        ) as output_file:
+            i_reader = csv.reader(input_file)
+            ca_reader = csv.reader(ca_file)
+            ub_reader = csv.reader(ub_file)
+            o_writer = csv.writer(output_file, lineterminator="\n")
+
+            i_header = next(i_reader)
+            i_header_lookup = {h: i_header.index(h) for h in i_header}
+
+            ca_header = next(ca_reader)
+            ca_header_lookup = {h: ca_header.index(h) for h in ca_header}
+
+            ub_header = next(ub_reader)
+            ub_header_lookup = {h: ub_header.index(h) for h in ub_header}
+
+            o_header = [*i_header, "ca_manifest_url", "ub_manifest_url"]
+            o_writer.writerow(o_header)
+
+            ca_lookup = {}
+            for row in ca_reader:
+                ca_lookup[row[ca_header_lookup["film_id"]]] = row[
+                    ca_header_lookup["manifest_url"]
+                ]
+
+            ub_lookup = {}
+            for row in ub_reader:
+                ub_lookup[row[ub_header_lookup["film_id"]]] = row[
+                    ub_header_lookup["manifest_url"]
+                ]
+
+            for row in i_reader:
+                film_id = row[i_header_lookup["film_id"]]
+                if film_id in ca_lookup:
+                    row.append(ca_lookup[film_id])
+                else:
+                    row.append("")
+                if film_id in ub_lookup:
+                    row.append(ub_lookup[film_id])
+                else:
+                    row.append("")
+                o_writer.writerow(row)
 
     if not action or "addresses" in action:
         print("Preprocessing addresses")
@@ -314,10 +374,13 @@ def main(action: typing.List[str] = typer.Option(None)):
     if not action or "programmes" in action:
         print("Preprocessing programmes")
         # add Vooruit image urls to programme
+        # add city archive manifest urls to programme
         # calculate programme dates
         with open("data/clean/tblProgramme.csv") as programme_file, open(
             "data/clean/images/programmes_image_urls.csv"
         ) as programme_image_file, open(
+            "data/clean/images/programmes_city_archive_manifests.csv"
+        ) as programme_ca_image_file, open(
             "data/clean/tblProgrammeBoxOffice.csv"
         ) as programme_box_office_file, open(
             "data/clean/tblProgrammeDate.csv"
@@ -328,6 +391,7 @@ def main(action: typing.List[str] = typer.Option(None)):
         ) as programme_date_output_file:
             p_reader = csv.reader(programme_file)
             i_reader = csv.reader(programme_image_file)
+            ca_reader = csv.reader(programme_ca_image_file)
             pbo_reader = csv.reader(programme_box_office_file)
             pd_reader = csv.reader(programme_date_file)
             po_writer = csv.writer(programme_ouptut_file, lineterminator="\n")
@@ -338,6 +402,9 @@ def main(action: typing.List[str] = typer.Option(None)):
 
             i_header = next(i_reader)
             i_header_lookup = {h: i_header.index(h) for h in i_header}
+
+            ca_header = next(ca_reader)
+            ca_header_lookup = {h: ca_header.index(h) for h in ca_header}
 
             pbo_header = next(pbo_reader)
             pbo_header_lookup = {h: pbo_header.index(h) for h in pbo_header}
@@ -355,6 +422,7 @@ def main(action: typing.List[str] = typer.Option(None)):
             pdo_writer.writerow(pdo_header)
 
             p_header.append("vooruit_image_url")
+            p_header.append("ca_manifest_url")
             p_header.extend(
                 [
                     "gross_income",
@@ -374,6 +442,12 @@ def main(action: typing.List[str] = typer.Option(None)):
                     i_header_lookup["image_url"]
                 ]
 
+            ca_lookup = {}
+            for row in ca_reader:
+                ca_lookup[row[ca_header_lookup["programme_id"]]] = row[
+                    ca_header_lookup["manifest_url"]
+                ]
+
             pbo_lookup = {}
             for row in pbo_reader:
                 pbo_lookup[row[pbo_header_lookup["programme_id"]]] = row[1:]
@@ -391,6 +465,10 @@ def main(action: typing.List[str] = typer.Option(None)):
                 }
                 if programme_id in i_lookup:
                     row.append(i_lookup[programme_id])
+                else:
+                    row.append("")
+                if programme_id in ca_lookup:
+                    row.append(ca_lookup[programme_id])
                 else:
                     row.append("")
                 if programme_id in pbo_lookup:

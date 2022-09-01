@@ -23,6 +23,26 @@
                 }
             },
             {
+                "system_name": "city_archive_manifest",
+                "display_name": "Poster from Archief Gent",
+                "type": "String",
+                "permissions": {
+                    "get": [
+                        "__all__.global_admin",
+                        "__all__.anonymous"
+                    ],
+                    "post": [
+                        "__all__.global_admin"
+                    ],
+                    "put": [
+                        "__all__.global_admin"
+                    ],
+                    "delete": [
+                        "__all__.global_admin"
+                    ]
+                }
+            },
+            {
                 "system_name": "gross_income",
                 "display_name": "Gross income",
                 "type": "String",
@@ -197,6 +217,14 @@
                         "label": "Mentioned dates",
                         "field": "$r_programme_programme_date->$dates_mentioned",
                         "type": "list"
+                    },
+                    {
+                        "field": "$vooruit_image",
+                        "type": "vooruit_image"
+                    },
+                    {
+                        "field": "$city_archive_manifest",
+                        "type": "iiif-manifest"
                     }
                 ]
             },
