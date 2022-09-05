@@ -1226,6 +1226,52 @@ async def create_data(data_actions: typing.List[str] = None):
 async def create_sources(source_actions: typing.List[str] = None):
     pool = await asyncpg.create_pool(**config.DATABASE)
 
+    lookups = {}
+
+    if not source_actions or "delete_sources" in source_actions:
+        print("Deleting existing sources.")
+        await db_data.delete_source_relations(
+            pool=pool,
+            project_name="cinema_belgica",
+        )
+
+    if not source_actions or "create_source_relation" in source_actions:
+        print("Creating source relation")
+        await db_structure.create_relation_config(
+            pool=pool,
+            project_name="cinema_belgica",
+            username="cinema_belgica",
+            system_name="_source_",
+            display_name="Source",
+            config='"{}"',
+            domains=[],
+            ranges=[],
+        )
+
+    if not source_actions or "create_entity_sources" in source_actions:
+        print("Adding entity sources")
+        await db_data.import_entity_source_relations(
+            pool=pool,
+            project_name="cinema_belgica",
+            username="cinema_belgica",
+            conf={
+                "filename": "processed/entity_sources.csv",
+            },
+            lookups=lookups,
+        )
+
+    if not source_actions or "create_relation_sources" in source_actions:
+        print("Adding relation sources")
+        await db_data.import_relation_source_relations(
+            pool=pool,
+            project_name="cinema_belgica",
+            username="cinema_belgica",
+            conf={
+                "filename": "processed/relation_sources.csv",
+            },
+            lookups=lookups,
+        )
+
     await pool.close()
 
 
