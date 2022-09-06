@@ -224,7 +224,7 @@
                     },
                     {
                         "field": "$city_archive_manifest",
-                        "type": "iiif-manifest"
+                        "type": "iiif_manifest"
                     }
                 ]
             },

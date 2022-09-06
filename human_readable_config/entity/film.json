@@ -249,11 +249,11 @@
                     },
                     {
                         "field": "$city_archive_manifest",
-                        "type": "iiif-manifest"
+                        "type": "iiif_manifest"
                     },
                     {
                         "field": "$university_library_manifest",
-                        "type": "iiif-manifest"
+                        "type": "iiif_manifest"
                     },
                     {
                         "field": "$length $length_unit",
