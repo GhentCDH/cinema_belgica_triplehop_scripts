@@ -4,6 +4,7 @@ config.py
 
 config/*
 data/*
+export/*
 
 human_readable_config/groups.json
 human_readable_config/relations.json
