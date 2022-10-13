@@ -497,13 +497,13 @@ def main(action: typing.List[str] = typer.Option(None)):
                             datetime.datetime.strptime(
                                 date.replace("193X", "1935"), "%Y-%m-%d"
                             )
-                            + datetime.timedelta(days=7),
+                            + datetime.timedelta(days=6),
                             "%Y-%m-%d",
                         ).replace("1935", "193X")
                     else:
                         date_end = datetime.datetime.strftime(
                             datetime.datetime.strptime(date, "%Y-%m-%d")
-                            + datetime.timedelta(days=7),
+                            + datetime.timedelta(days=6),
                             "%Y-%m-%d",
                         )
                 else:
