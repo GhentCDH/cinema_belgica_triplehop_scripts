@@ -183,7 +183,7 @@ async def export_data():
             "id",
             *[v for v in entity_config["props"].values() if v != "original_id"],
         ]
-        with open(f"export/entities/{entity_type_name}.csv", "w") as out_file:
+        with open(f"export/entity__{entity_type_name}.csv", "w") as out_file:
             out_writer = csv.DictWriter(
                 out_file,
                 fieldnames=columns,
@@ -239,7 +239,7 @@ async def export_data():
                     *[v for v in relation_config["props"].values()],
                 ]
                 with open(
-                    f"export/relations/{domain_entity_type}__{range_entity_type}.csv",
+                    f"export/relation__{domain_entity_type}__{range_entity_type}.csv",
                     "w",
                 ) as out_file:
                     out_writer = csv.DictWriter(
@@ -287,7 +287,7 @@ async def export_data():
         for entity_type in data:
             for source_type in data[entity_type]:
                 with open(
-                    f"export/entity_sources/{entity_type}__{source_type}.csv", "w"
+                    f"export/entity_source__{entity_type}__{source_type}.csv", "w"
                 ) as out_file:
                     out_writer = csv.DictWriter(
                         out_file,
@@ -337,7 +337,7 @@ async def export_data():
         for relation_domain_range in data:
             for source_type in data[relation_domain_range]:
                 with open(
-                    f"export/relation_sources/{relation_domain_range}__{source_type}.csv",
+                    f"export/relation_source__{relation_domain_range}__{source_type}.csv",
                     "w",
                 ) as out_file:
                     out_writer = csv.DictWriter(
