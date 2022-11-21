@@ -131,7 +131,7 @@
                 "parts": {
                     "entity_type_name": "$entity_type_name",
                     "id": "$id",
-                    "selector_value": "$ri_film_censorship->$r_mentioned_film_title->$title $r_censorship_appeal->$date"
+                    "selector_value": "$ri_film_censorship->$r_mentioned_film_title->$title $date"
                 },
                 "type": "nested"
             },
@@ -148,7 +148,7 @@
                 "parts": {
                     "entity_type_name": "$entity_type_name",
                     "id": "$id",
-                    "selector_value": "$r_censorship_cut_category->$name $r_censorship_cut->$date"
+                    "selector_value": "$r_censorship_cut_category->$name $date"
                 },
                 "type": "nested"
             },
