@@ -3,8 +3,9 @@ import time
 import typing
 
 import asyncpg
-import config
 import typer
+
+import config
 from triplehop_import_tools import db_data, db_structure
 
 
@@ -1104,7 +1105,7 @@ async def create_data(data_actions: typing.List[str] = None):
                     "id": ["int", "censorship_id"],
                 },
                 "range": {
-                    "id": ["int", "censorship_appeal_id"],
+                    "id": ["int", "has_appeal"],
                 },
                 "props": {
                     "id": ["int", "censorship_appeal_id"],
