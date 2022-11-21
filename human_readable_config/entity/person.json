@@ -214,14 +214,9 @@
                 "display_name": "Venues",
                 "base": "$ri_venue_person",
                 "parts": {
-                    "id": {
-                        "selector_value": "$ri_venue_person->$id",
-                        "type": "integer"
-                    },
-                    "name": {
-                        "selector_value": "$ri_venue_person->$name",
-                        "type": "text"
-                    }
+                    "entity_type_name": "$entity_type_name",
+                    "id": "$id",
+                    "selector_value": "$name"
                 },
                 "type": "nested"
             },
@@ -230,14 +225,9 @@
                 "display_name": "Companies",
                 "base": "$ri_company_person",
                 "parts": {
-                    "id": {
-                        "selector_value": "$ri_company_person->$id",
-                        "type": "integer"
-                    },
-                    "name": {
-                        "selector_value": "$ri_company_person->$name",
-                        "type": "text"
-                    }
+                    "entity_type_name": "$entity_type_name",
+                    "id": "$id",
+                    "selector_value": "$name"
                 },
                 "type": "nested"
             },
@@ -246,14 +236,9 @@
                 "display_name": "Films",
                 "base": "$ri_film_person",
                 "parts": {
-                    "id": {
-                        "selector_value": "$ri_film_person->$id",
-                        "type": "integer"
-                    },
-                    "name": {
-                        "selector_value": "$ri_film_person->$title",
-                        "type": "text"
-                    }
+                    "entity_type_name": "$entity_type_name",
+                    "id": "$id",
+                    "selector_value": "$title"
                 },
                 "type": "nested"
             }

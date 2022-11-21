@@ -323,14 +323,9 @@
                 "display_name": "City",
                 "base": "$r_address->$r_address_city",
                 "parts": {
-                    "id": {
-                        "selector_value": "$r_address->$r_address_city->$id",
-                        "type": "integer"
-                    },
-                    "name": {
-                        "selector_value": "$r_address->$r_address_city->$name",
-                        "type": "text"
-                    }
+                    "entity_type_name": "$entity_type_name",
+                    "id": "$id",
+                    "selector_value": "$name"
                 },
                 "type": "nested"
             },

@@ -177,14 +177,9 @@
                 "display_name": "Venues",
                 "base": "$ri_venue_company",
                 "parts": {
-                    "id": {
-                        "selector_value": "$ri_venue_company->$id",
-                        "type": "integer"
-                    },
-                    "name": {
-                        "selector_value": "$ri_venue_company->$name",
-                        "type": "text"
-                    }
+                    "entity_type_name": "$entity_type_name",
+                    "id": "$id",
+                    "selector_value": "$name"
                 },
                 "type": "nested"
             },
@@ -193,14 +188,9 @@
                 "display_name": "Films",
                 "base": "$ri_film_company",
                 "parts": {
-                    "id": {
-                        "selector_value": "$ri_film_company->$id",
-                        "type": "integer"
-                    },
-                    "name": {
-                        "selector_value": "$ri_film_company->$title",
-                        "type": "text"
-                    }
+                    "entity_type_name": "$entity_type_name",
+                    "id": "$id",
+                    "selector_value": "$title"
                 },
                 "type": "nested"
             }

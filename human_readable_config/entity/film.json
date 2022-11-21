@@ -325,16 +325,11 @@
                 "system_name": "director",
                 "display_name": "Directors",
                 "base": "$r_film_person",
-                "filter": "$r_film_person.$type == director",
+                "filter": ".$type == director",
                 "parts": {
-                    "id": {
-                        "selector_value": "$r_film_person->$id",
-                        "type": "integer"
-                    },
-                    "name": {
-                        "selector_value": "$r_film_person->$name",
-                        "type": "text"
-                    }
+                    "entity_type_name": "$entity_type_name",
+                    "id": "$id",
+                    "selector_value": "$name"
                 },
                 "type": "nested"
             },
@@ -342,16 +337,11 @@
                 "system_name": "actor",
                 "display_name": "Actors",
                 "base": "$r_film_person",
-                "filter": "$r_film_person.$type == actor",
+                "filter": ".$type == actor",
                 "parts": {
-                    "id": {
-                        "selector_value": "$r_film_person->$id",
-                        "type": "integer"
-                    },
-                    "name": {
-                        "selector_value": "$r_film_person->$name",
-                        "type": "text"
-                    }
+                    "entity_type_name": "$entity_type_name",
+                    "id": "$id",
+                    "selector_value": "$name"
                 },
                 "type": "nested"
             },
@@ -359,16 +349,11 @@
                 "system_name": "distributor",
                 "display_name": "Distributors",
                 "base": "$r_film_company",
-                "filter": "$r_film_company.$type == distributor",
+                "filter": ".$type == distributor",
                 "parts": {
-                    "id": {
-                        "selector_value": "$r_film_company->$id",
-                        "type": "integer"
-                    },
-                    "name": {
-                        "selector_value": "$r_film_company->$name",
-                        "type": "text"
-                    }
+                    "entity_type_name": "$entity_type_name",
+                    "id": "$id",
+                    "selector_value": "$name"
                 },
                 "type": "nested"
             },
@@ -376,16 +361,11 @@
                 "system_name": "production_company",
                 "display_name": "Production companies",
                 "base": "$r_film_company",
-                "filter": "$r_film_company.$type == production_company",
+                "filter": ".$type == production_company",
                 "parts": {
-                    "id": {
-                        "selector_value": "$r_film_company->$id",
-                        "type": "integer"
-                    },
-                    "name": {
-                        "selector_value": "$r_film_company->$name",
-                        "type": "text"
-                    }
+                    "entity_type_name": "$entity_type_name",
+                    "id": "$id",
+                    "selector_value": "$name"
                 },
                 "type": "nested"
             },
@@ -394,14 +374,9 @@
                 "display_name": "Countries",
                 "base": "$r_film_country",
                 "parts": {
-                    "id": {
-                        "selector_value": "$r_film_country->$id",
-                        "type": "integer"
-                    },
-                    "name": {
-                        "selector_value": "$r_film_country->$name",
-                        "type": "text"
-                    }
+                    "entity_type_name": "$entity_type_name",
+                    "id": "$id",
+                    "selector_value": "$name"
                 },
                 "type": "nested"
             }

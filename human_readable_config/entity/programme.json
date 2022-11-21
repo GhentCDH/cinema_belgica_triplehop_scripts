@@ -268,14 +268,9 @@
                 "display_name": "Venue",
                 "base": "$r_programme_venue",
                 "parts": {
-                    "id": {
-                        "selector_value": "$r_programme_venue->$id",
-                        "type": "integer"
-                    },
-                    "name": {
-                        "selector_value": "$r_programme_venue->$name",
-                        "type": "text"
-                    }
+                    "entity_type_name": "$entity_type_name",
+                    "id": "$id",
+                    "selector_value": "$name"
                 },
                 "type": "nested"
             },
@@ -291,14 +286,9 @@
                 "display_name": "Films",
                 "base": "$r_programme_programme_item->$r_programme_item_film",
                 "parts": {
-                    "id": {
-                        "selector_value": "$r_programme_programme_item->$r_programme_item_film->$id",
-                        "type": "integer"
-                    },
-                    "name": {
-                        "selector_value": "$r_programme_programme_item->$r_programme_item_film->$title",
-                        "type": "text"
-                    }
+                    "entity_type_name": "$entity_type_name",
+                    "id": "$id",
+                    "selector_value": "$title"
                 },
                 "type": "nested"
             }

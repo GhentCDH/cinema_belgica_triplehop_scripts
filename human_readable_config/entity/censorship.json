@@ -129,14 +129,9 @@
                 "display_name": "Appeal",
                 "base": "$r_censorship_appeal",
                 "parts": {
-                    "id": {
-                        "selector_value": "$r_censorship_appeal->$id",
-                        "type": "integer"
-                    },
-                    "name": {
-                        "selector_value": "$r_censorship_appeal->$ri_film_censorship->$r_mentioned_film_title->$title $r_censorship_appeal->$date",
-                        "type": "text"
-                    }
+                    "entity_type_name": "$entity_type_name",
+                    "id": "$id",
+                    "selector_value": "$ri_film_censorship->$r_mentioned_film_title->$title $r_censorship_appeal->$date"
                 },
                 "type": "nested"
             },
@@ -151,14 +146,9 @@
                 "display_name": "Cut",
                 "base": "$r_censorship_cut",
                 "parts": {
-                    "id": {
-                        "selector_value": "$r_censorship_cut->$id",
-                        "type": "integer"
-                    },
-                    "name": {
-                        "selector_value": "$r_censorship_cut->$r_censorship_cut_category->$name $r_censorship_cut->$date",
-                        "type": "text"
-                    }
+                    "entity_type_name": "$entity_type_name",
+                    "id": "$id",
+                    "selector_value": "$r_censorship_cut_category->$name $r_censorship_cut->$date"
                 },
                 "type": "nested"
             },
@@ -167,14 +157,9 @@
                 "display_name": "Cut reason category",
                 "base": "$r_censorship_cut->$r_censorship_cut_category",
                 "parts": {
-                    "id": {
-                        "selector_value": "$r_censorship_cut->$r_censorship_cut_category->$id",
-                        "type": "integer"
-                    },
-                    "name": {
-                        "selector_value": "$r_censorship_cut->$r_censorship_cut_category->$name",
-                        "type": "text"
-                    }
+                    "entity_type_name": "$entity_type_name",
+                    "id": "$id",
+                    "selector_value": "$name"
                 },
                 "type": "nested"
             },
@@ -183,14 +168,9 @@
                 "display_name": "Cut reason main category",
                 "base": "$r_censorship_cut->$r_censorship_cut_category->$r_censorship_cut_main_category",
                 "parts": {
-                    "id": {
-                        "selector_value": "$r_censorship_cut->$r_censorship_cut_category->$r_censorship_cut_main_category->$id",
-                        "type": "integer"
-                    },
-                    "name": {
-                        "selector_value": "$r_censorship_cut->$r_censorship_cut_category->$r_censorship_cut_main_category->$name",
-                        "type": "text"
-                    }
+                    "entity_type_name": "$entity_type_name",
+                    "id": "$id",
+                    "selector_value": "$name"
                 },
                 "type": "nested"
             },
