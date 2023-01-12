@@ -142,17 +142,6 @@
                 "type": "text"
             },
             {
-                "system_name": "cut",
-                "display_name": "Cut",
-                "base": "$r_censorship_cut",
-                "parts": {
-                    "entity_type_name": "$entity_type_name",
-                    "id": "$id",
-                    "selector_value": "$r_censorship_cut_category->$name $date"
-                },
-                "type": "nested"
-            },
-            {
                 "system_name": "cut_category",
                 "display_name": "Cut reason category",
                 "base": "$r_censorship_cut->$r_censorship_cut_category",
