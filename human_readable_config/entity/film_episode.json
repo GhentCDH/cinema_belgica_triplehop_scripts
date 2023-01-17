@@ -118,5 +118,12 @@
                 ]
             }
         ]
+    },
+    "es_data": {
+        "permissions": {
+            "index": [
+                "__all__.global_admin"
+            ]
+        }
     }
 }

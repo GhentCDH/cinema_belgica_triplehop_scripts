@@ -77,5 +77,15 @@
                 "__all__.global_admin"
             ]
         }
+    },
+    "display": {
+        "title": "$date_start - $date_end"
+    },
+    "es_data": {
+        "permissions": {
+            "index": [
+                "__all__.global_admin"
+            ]
+        }
     }
 }

@@ -57,5 +57,15 @@
                 "__all__.global_admin"
             ]
         }
+    },
+    "display": {
+        "title": "$name"
+    },
+    "es_data": {
+        "permissions": {
+            "index": [
+                "__all__.global_admin"
+            ]
+        }
     }
 }
