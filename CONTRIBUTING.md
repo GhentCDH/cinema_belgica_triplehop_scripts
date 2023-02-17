@@ -8,23 +8,23 @@ Documentation is currently severely lacking. Please contact <https://github.ugen
 
 ### Install Poetry
 
-    ```sh
-    sudo apt-get install python3-distutils
-    curl -sSL https://install.python-poetry.org | python3 -
-    export PATH="/home/vagrant/.local/bin:$PATH"
-    ```
+```sh
+sudo apt-get install python3-distutils
+curl -sSL https://install.python-poetry.org | python3 -
+export PATH="/home/vagrant/.local/bin:$PATH"
+```
 
 ### Download code
 
-    ```sh
-    git clone git@github.com:GhentCDH/cinema_belgica_triplehop_scripts.git
-    ```
+```sh
+git clone git@github.com:GhentCDH/cinema_belgica_triplehop_scripts.git
+```
 
 ### Install Python dependencies (in code folder)
 
-    ```sh
-    poetry install
-    ```
+```sh
+poetry install
+```
 
 ### Preprocess data
 
@@ -35,15 +35,15 @@ Prerequisites:
 
 The data can be preprocessed using the `preprocess_data.py` script as follows:
 
-    ```sh
-    python cinema_belgica_triplehop_scripts/preprocess_data.py
-    ```
+```sh
+python cinema_belgica_triplehop_scripts/preprocess_data.py
+```
 
 The sources can be processed using the `preprocess_sources.py` script as follows:
 
-    ```sh
-    python cinema_belgica_triplehop_scripts/preprocess_sources.py
-    ```
+```sh
+python cinema_belgica_triplehop_scripts/preprocess_sources.py
+```
 
 ### Import data
 
@@ -54,6 +54,6 @@ Prerequisites:
 
 The data can be imported using the `import_data.py` script as follows:
 
-    ```sh
-    python cinema_belgica_triplehop_scripts/import_data.py
-    ```
+```sh
+python cinema_belgica_triplehop_scripts/import_data.py
+```
