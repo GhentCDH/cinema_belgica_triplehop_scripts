@@ -9,7 +9,7 @@ import config
 from triplehop_import_tools import db_data, db_structure
 
 
-async def create_structure(structure_actions: typing.List[str]):
+async def create_structure(structure_actions: typing.List[str], reset_count: bool, reset_source_count: bool):
     pool = await asyncpg.create_pool(**config.DATABASE)
 
     if not structure_actions or "project_config" in structure_actions:
@@ -56,6 +56,7 @@ async def create_structure(structure_actions: typing.List[str]):
                     type="entity",
                     system_name=system_name,
                 ),
+                reset_count=reset_count,
             )
 
     if not structure_actions or "relation_configs" in structure_actions:
@@ -128,6 +129,7 @@ async def create_structure(structure_actions: typing.List[str]):
                 ),
                 domains=domains,
                 ranges=ranges,
+                reset_count=reset_count,
             )
         await db_structure.create_relation_config(
             pool=pool,
@@ -138,6 +140,7 @@ async def create_structure(structure_actions: typing.List[str]):
             config="{}",
             domains=[],
             ranges=[],
+            reset_count=reset_source_count,
         )
 
     if not structure_actions or "recreate_graph" in structure_actions:
@@ -1285,7 +1288,13 @@ def main(
     start_time = time.time()
     loop = asyncio.get_event_loop()
     if not actions or "create_structure" in actions:
-        loop.run_until_complete(create_structure(sub_actions))
+        reset_count = True
+        if "create_data" not in actions:
+            reset_count = False
+        reset_source_count = True
+        if "create_sources" not in actions:
+            reset_source_count = False
+        loop.run_until_complete(create_structure(sub_actions, reset_count, reset_source_count))
     if not actions or "create_data" in actions:
         loop.run_until_complete(create_data(sub_actions))
     if not actions or "create_sources" in actions:
