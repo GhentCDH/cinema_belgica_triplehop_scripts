@@ -58,7 +58,8 @@
             {
                 "fields": [
                     {
-                        "field": "$number"
+                        "field": "$number",
+                        "type": "number"
                     }
                 ]
             }
