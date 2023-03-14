@@ -177,6 +177,10 @@
             }
         ],
         "permissions": {
+            "view": [
+                "__all__.global_admin",
+                "__all__.anonymous"
+            ],
             "index": [
                 "__all__.global_admin"
             ]

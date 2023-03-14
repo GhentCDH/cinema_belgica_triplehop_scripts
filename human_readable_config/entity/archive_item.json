@@ -170,6 +170,9 @@
     },
     "es_data": {
         "permissions": {
+            "view": [
+                "__all__.global_admin"
+            ],
             "index": [
                 "__all__.global_admin"
             ]
