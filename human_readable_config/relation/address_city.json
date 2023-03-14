@@ -19,5 +19,9 @@
                 "__all__.global_admin"
             ]
         }
+    },
+    "edit": {
+        "domain_title": "City",
+        "range_title": "Addresses"
     }
 }

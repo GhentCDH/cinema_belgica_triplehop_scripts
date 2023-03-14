@@ -46,6 +46,12 @@
                 "system_name": "location",
                 "display_name": "Location",
                 "type": "Geometry",
+                "validators": [
+                    {
+                        "type": "geometry_point",
+                        "error_message": "Please provide valid coordinates (e.g., 51.0331333,3.7426851)."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -136,6 +142,32 @@
                     },
                     {
                         "field": "$architectural_info"
+                    }
+                ]
+            }
+        ]
+    },
+    "edit": {
+        "layout": [
+            {
+                "label": "General",
+                "fields": [
+                    {
+                        "field": "$street_name",
+                        "help_message": "Street name and house number divided by a space."
+                    },
+                    {
+                        "field": "$location",
+                        "type": "geometry",
+                        "help_message": "Coordinates divided by a comma: first latitude, then longitude (e.g., 51.0331333,3.7426851)."
+                    },
+                    {
+                        "field": "$district",
+                        "help_message": "Neighbourhood."
+                    },
+                    {
+                        "field": "$architectural_info",
+                        "help_message": "Description of the building."
                     }
                 ]
             }
