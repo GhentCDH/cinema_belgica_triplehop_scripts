@@ -5,6 +5,16 @@
                 "system_name": "type",
                 "display_name": "Job type",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "list",
+                        "allowed_values": [
+                            "actor",
+                            "director"
+                        ],
+                        "error_message": "Please provide a valid value (actor or director)."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",

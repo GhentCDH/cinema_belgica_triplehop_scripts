@@ -5,6 +5,16 @@
                 "system_name": "type",
                 "display_name": "Company type",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "list",
+                        "allowed_values": [
+                            "distributor",
+                            "production_company"
+                        ],
+                        "error_message": "Please provide a valid value (distributor or production_company)."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",

@@ -5,6 +5,11 @@
                 "system_name": "number",
                 "display_name": "Number",
                 "type": "Int",
+                "validators": [
+                    {
+                        "type": "required"
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
