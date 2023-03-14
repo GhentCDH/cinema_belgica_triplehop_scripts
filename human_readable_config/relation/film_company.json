@@ -50,5 +50,23 @@
                 ]
             }
         ]
+    },
+    "edit": {
+        "domain_title": "Company(ies)",
+        "range_title": "Film(s)",
+        "layout": [
+            {
+                "fields": [
+                    {
+                        "field": "$type",
+                        "type": "dropdown",
+                        "options": [
+                            "distributor",
+                            "production_company"
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 }

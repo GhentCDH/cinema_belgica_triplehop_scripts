@@ -50,5 +50,18 @@
                 ]
             }
         ]
+    },
+    "edit": {
+        "domain_title": "Film(s)",
+        "range_title": "Episode(s)",
+        "layout": [
+            {
+                "fields": [
+                    {
+                        "field": "$number"
+                    }
+                ]
+            }
+        ]
     }
 }

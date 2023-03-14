@@ -15,5 +15,9 @@
                 "__all__.global_admin"
             ]
         }
+    },
+    "edit": {
+        "domain_title": "Country(ies)",
+        "range_title": "Film(s)"
     }
 }
