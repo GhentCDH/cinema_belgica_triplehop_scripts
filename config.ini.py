@@ -16,9 +16,19 @@ USERS = [
     },
 ]
 
+GROUPS = [
+    {
+        "project_name": "",
+        "system_name": "",
+        "display_name": "",
+        "description": "",
+    },
+]
+
 USERS_GROUPS = [
     {
         "username": "",
-        "group_name": "",
+        "group_project_name": "",
+        "group_system_name": "",
     },
 ]
