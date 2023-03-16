@@ -9,16 +9,20 @@
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
+                        "cinema_belgica.editor",
                         "__all__.anonymous"
                     ],
                     "post": [
-                        "__all__.global_admin"
+                        "__all__.global_admin",
+                        "cinema_belgica.editor"
                     ],
                     "put": [
-                        "__all__.global_admin"
+                        "__all__.global_admin",
+                        "cinema_belgica.editor"
                     ],
                     "delete": [
-                        "__all__.global_admin"
+                        "__all__.global_admin",
+                        "cinema_belgica.editor"
                     ]
                 }
             }
@@ -26,16 +30,20 @@
         "permissions": {
             "get": [
                 "__all__.global_admin",
+                "cinema_belgica.editor",
                 "__all__.anonymous"
             ],
             "post": [
-                "__all__.global_admin"
+                "__all__.global_admin",
+                "cinema_belgica.editor"
             ],
             "put": [
-                "__all__.global_admin"
+                "__all__.global_admin",
+                "cinema_belgica.editor"
             ],
             "delete": [
-                "__all__.global_admin"
+                "__all__.global_admin",
+                "cinema_belgica.editor"
             ]
         }
     },
@@ -54,7 +62,8 @@
     "es_data": {
         "permissions": {
             "view": [
-                "__all__.global_admin"
+                "__all__.global_admin",
+                "cinema_belgica.editor"
             ],
             "index": [
                 "__all__.global_admin"
