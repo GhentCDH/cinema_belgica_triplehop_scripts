@@ -398,6 +398,7 @@
         "permissions": {
             "view": [
                 "__all__.global_admin",
+                "cinema_belgica.editor",
                 "__all__.anonymous"
             ],
             "index": [
