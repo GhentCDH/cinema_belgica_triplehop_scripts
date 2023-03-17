@@ -78,6 +78,15 @@
                 "system_name": "suffix",
                 "display_name": "Suffix",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "list",
+                        "allowed_values": [
+                            "Jr."
+                        ],
+                        "error_message": "Please provide a valid value (Jr.)."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -126,6 +135,13 @@
                 "system_name": "imdb_id",
                 "display_name": "IMDb ID",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "regex",
+                        "regex": "^nm[0-9]{7,8}$",
+                        "error_message": "Please provide a valid IMDB person id: nm followed by 7 or 8 digits (e.g., nm0221142)."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -150,6 +166,13 @@
                 "system_name": "wikidata_id",
                 "display_name": "Wikidata ID",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "regex",
+                        "regex": "^Q[0-9]+$",
+                        "error_message": "Please provide a valid Wikidata id: the letter Q followed by multiple digits (e.g., Q3130974)."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -222,6 +245,45 @@
                         "field": "$wikidata_id",
                         "type": "online_identifier",
                         "base_url": "https://www.wikidata.org/wiki/"
+                    }
+                ]
+            }
+        ]
+    },
+    "edit": {
+        "layout": [
+            {
+                "label": "General",
+                "fields": [
+                    {
+                        "field": "$name"
+                    },
+                    {
+                        "field": "$first_names",
+                        "multi": true
+                    },
+                    {
+                        "field": "$last_name"
+                    },
+                    {
+                        "field": "$suffix",
+                        "type": "dropdown",
+                        "options": [
+                            "Jr."
+                        ]
+                    },
+                    {
+                        "field": "$info"
+                    },
+                    {
+                        "field": "$imdb_id",
+                        "placeholder": "nm0221142",
+                        "help_message": "An IMDB peron id consists of nm followed by 7 or 8 digits (e.g., nm0221142)."
+                    },
+                    {
+                        "field": "$wikidata_id",
+                        "placeholder": "Q3130974",
+                        "help_message": "A Wikidata id consists of the letter Q followed by multiple digits (e.g., Q3130974)."
                     }
                 ]
             }

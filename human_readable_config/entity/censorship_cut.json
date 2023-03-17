@@ -6,6 +6,12 @@
                 "system_name": "date",
                 "display_name": "Date",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "edtf",
+                        "error_message": "Please provide a valid EDTF date (e.g., 1930-01-04 or 1930-01-XX) as described in the [Extended Date/Time Format (EDTF) Specification](https://www.loc.gov/standards/datetime/)."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -102,6 +108,25 @@
                 "fields": [
                     {
                         "field": "$date"
+                    },
+                    {
+                        "field": "$comment_nl"
+                    },
+                    {
+                        "field": "$comment_fr"
+                    }
+                ]
+            }
+        ]
+    },
+    "edit": {
+        "layout": [
+            {
+                "label": "General",
+                "fields": [
+                    {
+                        "field": "$date",
+                        "help_message": "A date that can contain approximations of uncertainties (e.g., 1930-01-04 or 1930-01-XX) as described in the [Extended Date/Time Format (EDTF) Specification](https://www.loc.gov/standards/datetime/)."
                     },
                     {
                         "field": "$comment_nl"

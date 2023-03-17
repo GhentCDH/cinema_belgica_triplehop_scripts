@@ -49,6 +49,18 @@
     "display": {
         "title": "$type"
     },
+    "edit": {
+        "layout": [
+            {
+                "label": "General",
+                "fields": [
+                    {
+                        "field": "$type"
+                    }
+                ]
+            }
+        ]
+    },
     "es_data": {
         "permissions": {
             "view": [

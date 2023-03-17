@@ -78,6 +78,16 @@
                 "system_name": "length_unit",
                 "display_name": "Length unit",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "list",
+                        "allowed_values": [
+                            "meters",
+                            "reel"
+                        ],
+                        "error_message": "Please provide a valid value (meters or reel)."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -134,6 +144,34 @@
                     {
                         "field": "$length $length_unit",
                         "label": "Length"
+                    }
+                ]
+            }
+        ]
+    },
+    "edit": {
+        "layout": [
+            {
+                "label": "General",
+                "fields": [
+                    {
+                        "field": "$title"
+                    },
+                    {
+                        "field": "$year",
+                        "placeholder": "1933",
+                        "help_message": "A year that can contain approximations of uncertainties (e.g., 1933, 1933?, 1933~, 1933% or 193X) as described in the [Extended Date/Time Format (EDTF) Specification](https://www.loc.gov/standards/datetime/)."
+                    },
+                    {
+                        "field": "$length"
+                    },
+                    {
+                        "field": "$length_unit",
+                        "type": "dropdown",
+                        "options": [
+                            "meters",
+                            "reel"
+                        ]
                     }
                 ]
             }

@@ -54,6 +54,12 @@
                 "system_name": "date_opened",
                 "display_name": "Date opened",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "edtf_year",
+                        "error_message": "Please provide a valid EDTF year (e.g., 1933, 1933?, 1933~, 1933% or 193X) as described in the [Extended Date/Time Format (EDTF) Specification](https://www.loc.gov/standards/datetime/)."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -78,6 +84,12 @@
                 "system_name": "date_closed",
                 "display_name": "Date closed",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "edtf_year",
+                        "error_message": "Please provide a valid EDTF year (e.g., 1933, 1933?, 1933~, 1933% or 193X) as described in the [Extended Date/Time Format (EDTF) Specification](https://www.loc.gov/standards/datetime/)."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -355,12 +367,51 @@
                     }
                 ]
             }
-        ],
-        "permissions": {
-            "index": [
-                "__all__.global_admin"
-            ]
-        }
+        ]
+    },
+    "edit": {
+        "layout": [
+            {
+                "label": "General",
+                "fields": [
+                    {
+                        "field": "$name"
+                    },
+                    {
+                        "field": "$date_opened"
+                    },
+                    {
+                        "field": "$date_closed"
+                    },
+                    {
+                        "field": "$status"
+                    },
+                    {
+                        "field": "$type"
+                    },
+                    {
+                        "field": "$ideological_characteristic"
+                    },
+                    {
+                        "field": "$ideological_remark"
+                    },
+                    {
+                        "field": "$infrastructure_info"
+                    },
+                    {
+                        "field": "$name_remarks"
+                    },
+                    {
+                        "field": "$screens",
+                        "type": "table"
+                    },
+                    {
+                        "field": "$seats",
+                        "type": "table"
+                    }
+                ]
+            }
+        ]
     },
     "es_data": {
         "fields": [

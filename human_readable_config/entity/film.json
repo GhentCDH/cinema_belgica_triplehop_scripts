@@ -152,7 +152,7 @@
             {
                 "system_name": "length",
                 "display_name": "Length",
-                "type": "String",
+                "type": "Int",
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -201,6 +201,13 @@
                 "system_name": "city_archive_manifest",
                 "display_name": "Poster from Archief Gent",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "regex",
+                        "regex": "^https://api.collectie.gent/iiif/presentation/v2/manifest/archiefgent:MA_ROM_XVI_AF_[0-9]{5}_R$",
+                        "error_message": "Please provide a valid city archive manifest url."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -225,6 +232,13 @@
                 "system_name": "university_library_manifest",
                 "display_name": "Poster from Ghent University Library",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "regex",
+                        "regex": "^https://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A[0-9A-Z]{8}[-][0-9A-Z]{4}[-][0-9A-Z]{4}[-][0-9A-Z]{4}[-][0-9A-Z]{12}$",
+                        "error_message": "Please provide a valid Ghent University Library manifest url."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -357,6 +371,23 @@
                         "placeholder": "IE7484252",
                         "help_message": "A valid Filmmagie id consists of the letters IE followed by multiple digits (e.g., IE7484252).",
                         "multi": true
+                    },
+                    {
+                        "field": "$city_archive_manifest"
+                    },
+                    {
+                        "field": "$university_library_manifest"
+                    },
+                    {
+                        "field": "$length"
+                    },
+                    {
+                        "field": "$length_unit",
+                        "type": "dropdown",
+                        "options": [
+                            "meters",
+                            "reel"
+                        ]
                     }
                 ]
             }

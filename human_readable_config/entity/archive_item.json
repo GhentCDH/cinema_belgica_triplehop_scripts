@@ -127,6 +127,13 @@
                 "system_name": "url",
                 "display_name": "Link",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "regex",
+                        "regex": "^https?:\\/\\/(?:www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b(?:[-a-zA-Z0-9()@:%_\\+.~#?&\\/=]*)$",
+                        "error_message": "Please provide a valid url."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -188,6 +195,34 @@
                     {
                         "field": "$url",
                         "type": "link"
+                    },
+                    {
+                        "field": "$editorial_comment"
+                    }
+                ]
+            }
+        ]
+    },
+    "edit": {
+        "layout": [
+            {
+                "label": "General",
+                "fields": [
+                    {
+                        "field": "$inventory_id"
+                    },
+                    {
+                        "field": "$inventory_description"
+                    },
+                    {
+                        "field": "$item_number"
+                    },
+                    {
+                        "field": "$name"
+                    },
+                    {
+                        "field": "$url",
+                        "help_message": "Link to a digital representation of the item."
                     },
                     {
                         "field": "$editorial_comment"

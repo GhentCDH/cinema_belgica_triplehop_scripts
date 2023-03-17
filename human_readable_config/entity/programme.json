@@ -6,6 +6,13 @@
                 "system_name": "vooruit_image",
                 "display_name": "Announcement in \"Vooruit\"",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "regex",
+                        "regex": "^https://adore.ugent.be/IIIF/images/archive.ugent.be:[0-9A-Z]{8}[-][0-9A-Z]{4}[-][0-9A-Z]{4}[-][0-9A-Z]{4}[-][0-9A-Z]{12}:DS[.][0-9]+_[0-9]+/[0-9]+%2C[0-9]+%2C[0-9]+%2C[0-9]+/full/0/default.jpg$",
+                        "error_message": "Please provide a valid Ghent University Library image url."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -30,6 +37,13 @@
                 "system_name": "city_archive_manifest",
                 "display_name": "Poster from Archief Gent",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "regex",
+                        "regex": "^https://api.collectie.gent/iiif/presentation/v2/manifest/archiefgent:MA_ROM_XVI_AF_[0-9]{5}_R$",
+                        "error_message": "Please provide a valid city archive manifest url."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -294,12 +308,50 @@
                     }
                 ]
             }
-        ],
-        "permissions": {
-            "index": [
-                "__all__.global_admin"
-            ]
-        }
+        ]
+    },
+    "edit": {
+        "layout": [
+            {
+                "label": "General",
+                "fields": [
+                    {
+                        "field": "$vooruit_image",
+                        "type": "vooruit_image"
+                    },
+                    {
+                        "field": "$city_archive_manifest",
+                        "type": "iiif_manifest"
+                    }
+                ]
+            },
+            {
+                "label": "Box office",
+                "fields": [
+                    {
+                        "field": "$gross_income"
+                    },
+                    {
+                        "field": "$number_of_tickets"
+                    },
+                    {
+                        "field": "$mean_price"
+                    },
+                    {
+                        "field": "$taxes_and_copyrights"
+                    },
+                    {
+                        "field": "$net_income"
+                    },
+                    {
+                        "field": "$cheapest_ticket"
+                    },
+                    {
+                        "field": "$most_expensive_ticket"
+                    }
+                ]
+            }
+        ]
     },
     "es_data": {
         "fields": [

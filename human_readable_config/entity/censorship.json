@@ -6,6 +6,18 @@
                 "system_name": "rating",
                 "display_name": "Rating",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "list",
+                        "allowed_values": [
+                            "all",
+                            "all (after cut)",
+                            "12+",
+                            "16+"
+                        ],
+                        "error_message": "Please provide a valid value (all, all (after cut), 12+ or 16+)."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -30,6 +42,12 @@
                 "system_name": "date",
                 "display_name": "Date",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "edtf",
+                        "error_message": "Please provide a valid EDTF date (e.g., 1930-01-04 or 1930-01-XX) as described in the [Extended Date/Time Format (EDTF) Specification](https://www.loc.gov/standards/datetime/)."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -106,6 +124,32 @@
                     },
                     {
                         "field": "$date"
+                    },
+                    {
+                        "field": "$motivation"
+                    }
+                ]
+            }
+        ]
+    },
+    "edit": {
+        "layout": [
+            {
+                "label": "General",
+                "fields": [
+                    {
+                        "field": "$rating",
+                        "type": "dropdown",
+                        "options": [
+                            "all",
+                            "all (after cut)",
+                            "12+",
+                            "16+"
+                        ]
+                    },
+                    {
+                        "field": "$date",
+                        "help_message": "A date that can contain approximations of uncertainties (e.g., 1930-01-04 or 1930-01-XX) as described in the [Extended Date/Time Format (EDTF) Specification](https://www.loc.gov/standards/datetime/)."
                     },
                     {
                         "field": "$motivation"

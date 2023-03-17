@@ -31,6 +31,13 @@
                 "system_name": "isbn",
                 "display_name": "ISBN",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "regex",
+                        "regex": "^[0-9]{10}|[0-9]{13}$",
+                        "error_message": "Please provide a valid International Standard Book Number (ISBN)."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -55,6 +62,13 @@
                 "system_name": "issn",
                 "display_name": "ISSN",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "regex",
+                        "regex": "^[0-9]{4}-[0-9]{3}[0-9xX]$",
+                        "error_message": "Please provide a valid International Standard Serial Number (ISSN)."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -319,6 +333,13 @@
                 "system_name": "url",
                 "display_name": "URL",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "regex",
+                        "regex": "^https?:\\/\\/(?:www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b(?:[-a-zA-Z0-9()@:%_\\+.~#?&\\/=]*)$",
+                        "error_message": "Please provide a valid url."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -404,6 +425,53 @@
                     {
                         "field": "$url",
                         "type": "link"
+                    },
+                    {
+                        "field": "$editorial_comment"
+                    }
+                ]
+            }
+        ]
+    },
+    "edit": {
+        "layout": [
+            {
+                "label": "General",
+                "fields": [
+                    {
+                        "field": "$title"
+                    },
+                    {
+                        "field": "$publication_date"
+                    },
+                    {
+                        "field": "$publication_volume"
+                    },
+                    {
+                        "field": "$publication_number"
+                    },
+                    {
+                        "field": "$authors",
+                        "mutli": true
+                    },
+                    {
+                        "field": "$editors",
+                        "mutli": true
+                    },
+                    {
+                        "field": "$isbn"
+                    },
+                    {
+                        "field": "$issn"
+                    },
+                    {
+                        "field": "$place"
+                    },
+                    {
+                        "field": "$publisher"
+                    },
+                    {
+                        "field": "$url"
                     },
                     {
                         "field": "$editorial_comment"

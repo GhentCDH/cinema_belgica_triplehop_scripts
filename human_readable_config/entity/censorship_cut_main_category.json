@@ -6,6 +6,13 @@
                 "system_name": "code",
                 "display_name": "Code",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "regex",
+                        "regex": "^[1-9][0-9]*$",
+                        "error_message": "Please provide a valid code (e.g., 1)."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -75,6 +82,21 @@
         "title": "$name",
         "layout": [
             {
+                "fields": [
+                    {
+                        "field": "$code"
+                    },
+                    {
+                        "field": "$name"
+                    }
+                ]
+            }
+        ]
+    },
+    "edit": {
+        "layout": [
+            {
+                "label": "General",
                 "fields": [
                     {
                         "field": "$code"

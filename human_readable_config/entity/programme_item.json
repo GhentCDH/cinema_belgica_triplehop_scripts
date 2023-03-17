@@ -136,6 +136,27 @@
             }
         ]
     },
+    "edit": {
+        "layout": [
+            {
+                "label": "General",
+                "fields": [
+                    {
+                        "field": "$mentioned_venue"
+                    },
+                    {
+                        "field": "$official_rating"
+                    },
+                    {
+                        "field": "$catholic_rating"
+                    },
+                    {
+                        "field": "$catholic_rating_extra"
+                    }
+                ]
+            }
+        ]
+    },
     "es_data": {
         "permissions": {
             "view": [

@@ -86,6 +86,21 @@
             }
         ]
     },
+    "edit": {
+        "layout": [
+            {
+                "label": "General",
+                "fields": [
+                    {
+                        "field": "$name"
+                    },
+                    {
+                        "field": "$postal_code"
+                    }
+                ]
+            }
+        ]
+    },
     "es_data": {
         "permissions": {
             "view": [

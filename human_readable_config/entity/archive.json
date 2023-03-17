@@ -59,6 +59,18 @@
             }
         ]
     },
+    "edit": {
+        "layout": [
+            {
+                "label": "General",
+                "fields": [
+                    {
+                        "field": "$name"
+                    }
+                ]
+            }
+        ]
+    },
     "es_data": {
         "permissions": {
             "view": [
