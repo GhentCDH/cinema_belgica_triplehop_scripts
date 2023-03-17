@@ -1,8 +1,4 @@
 {
-    "display": {
-        "domain_title": "Cities",
-        "range_title": "Addresses"
-    },
     "data": {
         "permissions": {
             "get": [
@@ -23,6 +19,10 @@
                 "cinema_belgica.editor"
             ]
         }
+    },
+    "display": {
+        "domain_title": "Cities",
+        "range_title": "Addresses"
     },
     "edit": {
         "domain_title": "City",

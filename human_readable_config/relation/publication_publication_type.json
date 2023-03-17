@@ -19,5 +19,9 @@
                 "cinema_belgica.editor"
             ]
         }
+    },
+    "edit": {
+        "domain_title": "Publication type",
+        "range_title": "Publication"
     }
 }

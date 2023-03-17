@@ -19,5 +19,9 @@
                 "cinema_belgica.editor"
             ]
         }
+    },
+    "edit": {
+        "domain_title": "Programme date(s)",
+        "range_title": "Programme"
     }
 }

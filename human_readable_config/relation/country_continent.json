@@ -1,8 +1,4 @@
 {
-    "display": {
-        "domain_title": "Continents",
-        "range_title": "Countries"
-    },
     "data": {
         "permissions": {
             "get": [
@@ -23,5 +19,13 @@
                 "cinema_belgica.editor"
             ]
         }
+    },
+    "display": {
+        "domain_title": "Continents",
+        "range_title": "Countries"
+    },
+    "edit": {
+        "domain_title": "Continents",
+        "range_title": "Countries"
     }
 }

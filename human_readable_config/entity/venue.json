@@ -161,7 +161,7 @@
             {
                 "system_name": "ideological_characteristic",
                 "display_name": "Ideological characteristic",
-                "type": "String",
+                "type": "[String]",
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -258,6 +258,12 @@
                 "system_name": "screens",
                 "display_name": "Number of screens",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "table",
+                        "error_message": "Please provide valid data (e.g., [[\"Number of screens\", \"Years\"], [\"1\", \"1935/1938\"]])."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -282,6 +288,12 @@
                 "system_name": "seats",
                 "display_name": "Number of seats",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "table",
+                        "error_message": "Please provide valid data (e.g., [[\"Number of screens\", \"Years\"], [\"1\", \"1935/1938\"]])."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -346,7 +358,8 @@
                         "field": "$type"
                     },
                     {
-                        "field": "$ideological_characteristic"
+                        "field": "$ideological_characteristic",
+                        "type": "list"
                     },
                     {
                         "field": "$ideological_remark"
@@ -378,10 +391,14 @@
                         "field": "$name"
                     },
                     {
-                        "field": "$date_opened"
+                        "field": "$date_opened",
+                        "placeholder": "1933",
+                        "help_message": "A year that can contain approximations of uncertainties (e.g., 1933, 1933?, 1933~, 1933% or 193X) as described in the [Extended Date/Time Format (EDTF) Specification](https://www.loc.gov/standards/datetime/)."
                     },
                     {
-                        "field": "$date_closed"
+                        "field": "$date_closed",
+                        "placeholder": "1933",
+                        "help_message": "A year that can contain approximations of uncertainties (e.g., 1933, 1933?, 1933~, 1933% or 193X) as described in the [Extended Date/Time Format (EDTF) Specification](https://www.loc.gov/standards/datetime/)."
                     },
                     {
                         "field": "$status"
@@ -390,7 +407,8 @@
                         "field": "$type"
                     },
                     {
-                        "field": "$ideological_characteristic"
+                        "field": "$ideological_characteristic",
+                        "multi": true
                     },
                     {
                         "field": "$ideological_remark"

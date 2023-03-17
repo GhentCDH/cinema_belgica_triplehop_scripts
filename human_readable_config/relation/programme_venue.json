@@ -1,8 +1,4 @@
 {
-    "display": {
-        "domain_title": "Venues",
-        "range_title": "Programmes"
-    },
     "data": {
         "permissions": {
             "get": [
@@ -23,5 +19,13 @@
                 "cinema_belgica.editor"
             ]
         }
+    },
+    "display": {
+        "domain_title": "Venues",
+        "range_title": "Programmes"
+    },
+    "edit": {
+        "domain_title": "Venues",
+        "range_title": "Programmes"
     }
 }

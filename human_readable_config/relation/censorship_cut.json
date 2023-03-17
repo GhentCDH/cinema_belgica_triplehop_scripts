@@ -49,5 +49,19 @@
     "display": {
         "domain_title": "Cuts",
         "range_title": "Censorships"
+    },
+    "edit": {
+        "domain_title": "Cuts",
+        "range_title": "Censorships",
+        "layout": [
+            {
+                "fields": [
+                    {
+                        "field": "$order",
+                        "type": "number"
+                    }
+                ]
+            }
+        ]
     }
 }

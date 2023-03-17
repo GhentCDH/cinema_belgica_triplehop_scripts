@@ -30,6 +30,12 @@
                 "system_name": "year",
                 "display_name": "Release year",
                 "type": "String",
+                "validators": [
+                    {
+                        "type": "edtf_year",
+                        "error_message": "Please provide a valid EDTF year (e.g., 1933, 1933?, 1933~, 1933% or 193X) as described in the [Extended Date/Time Format (EDTF) Specification](https://www.loc.gov/standards/datetime/)."
+                    }
+                ],
                 "permissions": {
                     "get": [
                         "__all__.global_admin",

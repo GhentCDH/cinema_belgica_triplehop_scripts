@@ -4,7 +4,7 @@
             {
                 "system_name": "type",
                 "display_name": "Job type",
-                "type": "String",
+                "type": "[String]",
                 "permissions": {
                     "get": [
                         "__all__.global_admin",
@@ -125,7 +125,33 @@
             {
                 "fields": [
                     {
-                        "field": "$type"
+                        "field": "$type",
+                        "type": "list"
+                    },
+                    {
+                        "field": "$date_start",
+                        "type": "edtf_year"
+                    },
+                    {
+                        "field": "$date_end",
+                        "type": "edtf_year"
+                    },
+                    {
+                        "field": "$years"
+                    }
+                ]
+            }
+        ]
+    },
+    "edit": {
+        "domain_title": "People",
+        "range_title": "Venues",
+        "layout": [
+            {
+                "fields": [
+                    {
+                        "field": "$type",
+                        "multi": true
                     },
                     {
                         "field": "$date_start",

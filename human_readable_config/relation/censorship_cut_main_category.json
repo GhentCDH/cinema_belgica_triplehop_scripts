@@ -1,8 +1,4 @@
 {
-    "display": {
-        "domain_title": "Main categories",
-        "range_title": "Detailed categories"
-    },
     "data": {
         "permissions": {
             "get": [
@@ -23,5 +19,13 @@
                 "cinema_belgica.editor"
             ]
         }
+    },
+    "display": {
+        "domain_title": "Main categories",
+        "range_title": "Detailed categories"
+    },
+    "edit": {
+        "domain_title": "Main categories",
+        "range_title": "Detailed categories"
     }
 }

@@ -1,8 +1,4 @@
 {
-    "display": {
-        "domain_title": "Categories",
-        "range_title": "Censorship cuts"
-    },
     "data": {
         "permissions": {
             "get": [
@@ -23,5 +19,13 @@
                 "cinema_belgica.editor"
             ]
         }
+    },
+    "display": {
+        "domain_title": "Categories",
+        "range_title": "Censorship cuts"
+    },
+    "edit": {
+        "domain_title": "Categories",
+        "range_title": "Censorship cuts"
     }
 }

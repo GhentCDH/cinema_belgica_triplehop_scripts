@@ -1,8 +1,4 @@
 {
-    "display": {
-        "domain_title": "Archive",
-        "range_title": "Archive item"
-    },
     "data": {
         "permissions": {
             "get": [
@@ -23,5 +19,13 @@
                 "cinema_belgica.editor"
             ]
         }
+    },
+    "display": {
+        "domain_title": "Archive",
+        "range_title": "Archive item"
+    },
+    "edit": {
+        "domain_title": "Archive",
+        "range_title": "Archive item"
     }
 }

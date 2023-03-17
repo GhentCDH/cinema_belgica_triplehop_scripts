@@ -303,8 +303,9 @@ async def create_data(data_actions: typing.List[str] = None):
                     "status": ["string", "status"],
                     "type": ["string", "type"],
                     "ideological_characteristic": [
-                        "string",
+                        "[string]",
                         "ideological_characteristic",
+                        "|",
                     ],
                     "ideological_remark": ["string", "ideological_remark"],
                     "infrastructure_info": ["string", "infrastructure_info"],
@@ -741,7 +742,7 @@ async def create_data(data_actions: typing.List[str] = None):
                     "id": ["int", "person_id"],
                 },
                 "props": {
-                    "type": ["string", "job_type"],
+                    "type": ["[string]", "job_type", "|"],
                     "date_start": ["edtf", "start_date"],
                     "date_end": ["edtf", "end_date"],
                     "years": ["string", "years"],
@@ -816,7 +817,7 @@ async def create_data(data_actions: typing.List[str] = None):
                     "id": ["int", "person_id"],
                 },
                 "props": {
-                    "type": ["string", "job_type"],
+                    "type": ["[string]", "job_type", "|"],
                     "date_start": ["edtf", "start_date"],
                     "date_end": ["edtf", "end_date"],
                     "years": ["string", "years"],

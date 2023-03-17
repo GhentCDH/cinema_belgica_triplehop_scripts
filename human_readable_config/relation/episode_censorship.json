@@ -1,8 +1,4 @@
 {
-    "display": {
-        "domain_title": "Censorships",
-        "range_title": "Episodes"
-    },
     "data": {
         "permissions": {
             "get": [
@@ -23,5 +19,13 @@
                 "cinema_belgica.editor"
             ]
         }
+    },
+    "display": {
+        "domain_title": "Censorships",
+        "range_title": "Episodes"
+    },
+    "edit": {
+        "domain_title": "Censorships",
+        "range_title": "Episodes"
     }
 }
