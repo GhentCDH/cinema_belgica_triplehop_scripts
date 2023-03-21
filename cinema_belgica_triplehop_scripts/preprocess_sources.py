@@ -1905,6 +1905,57 @@ def main():
                         source[2],
                     )
 
+    #####################################
+    # Creating lookups to clean sources #
+    #####################################
+
+    print('Creating lookup to clean sources')
+
+    publication_editorial_comment_cleaning = {}
+    with open('data/fixtures/tblPublication200223.csv') as inf:
+        inr = csv.DictReader(inf)
+
+        for row in inr:
+            if (
+                row['editorial_comment_en'] != ''
+                and row['editorial_comment'] == ''
+            ):
+                print(row)
+            if (
+                row['editorial_comment_en'] != ''
+                and row['editorial_comment'] not in publication_editorial_comment_cleaning
+            ) :
+                publication_editorial_comment_cleaning[row['editorial_comment']] = row['editorial_comment_en'].replace('’', '\'').replace('’', '\'').replace('–', '-')
+
+    archive_item_inventory_description_cleaning = {}
+    archive_item_editorial_comment_cleaning = {}
+    with open('data/fixtures/tblArchiveItem200223.csv') as inf:
+        inr = csv.DictReader(inf)
+
+        for row in inr:
+            if (
+                row['inventory_description_en'] != ''
+                and row['inventory_description'] == ''
+            ):
+                print(row)
+            if (
+                row['inventory_description_en'] != ''
+                and row['inventory_description'] not in archive_item_editorial_comment_cleaning
+            ) :
+                archive_item_editorial_comment_cleaning[row['inventory_description']] = row['inventory_description_en'].replace('‘', '\'').replace('’', '\'').replace('–', '-')
+
+            if (
+                row['editorial_comment_en'] != ''
+                and row['editorial_comment'] == ''
+            ):
+                print(row)
+            if (
+                row['editorial_comment_en'] != ''
+                and row['editorial_comment'] not in archive_item_editorial_comment_cleaning
+            ) :
+                archive_item_editorial_comment_cleaning[row['editorial_comment']] = row['editorial_comment_en'].replace('‘', '\'').replace('’', '\'').replace('–', '-')
+
+
 
     ##########################
     # Write sources to file  #
@@ -1921,7 +1972,10 @@ def main():
         o_writer.writerow(i_header)
 
         for publication in publications:
-            o_writer.writerow(publication)
+            publication_list = list(publication)
+            if publication_list[1] in publication_editorial_comment_cleaning:
+                publication_list[1] = publication_editorial_comment_cleaning[publication_list[1]]
+            o_writer.writerow(publication_list)
 
             publication_type = list(publication)[3]
             if publication_type != '' and publication_type not in publication_type_lookup:
@@ -1959,7 +2013,12 @@ def main():
         o_writer.writerow(i_header)
 
         for archive_item in archive_items:
-            o_writer.writerow(archive_item)
+            archive_item_list = list(archive_item)
+            if archive_item_list[2] in archive_item_inventory_description_cleaning:
+                archive_item_list[2] = archive_item_inventory_description_cleaning[archive_item_list[2]]
+            if archive_item_list[-1] in archive_item_editorial_comment_cleaning:
+                archive_item_list[-1] = archive_item_editorial_comment_cleaning[archive_item_list[-1]]
+            o_writer.writerow(archive_item_list)
 
 
     write_sources(
