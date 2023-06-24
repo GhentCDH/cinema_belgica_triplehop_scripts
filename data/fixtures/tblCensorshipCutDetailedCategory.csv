@@ -1,0 +1,110 @@
+id,code,name,name_en,main_code
+1,"1,1",Minachting autoriteiten,Contempt authorities,1
+2,"1,2",Disrespect nationale vlag,Disrespect national flag,1
+3,"1,3",Partijdigheid geschiedenisview,Partisan historical view,1
+4,"1,4",Staatsgreep,Coup d'état,1
+5,"1,5",Propaganda,Propaganda,1
+6,"2,1",Overspel,Adultery,2
+7,"2,2",Spot vaderlijk (familie) gezag,Mock paternal (family) authority,2
+8,"2,3",Ongehoorzame kinderen,Disobedient children,2
+9,"2,4",Falende ouders,Failing parents,2
+10,"2,5",Geweld huwelijkspartners,Violence spouses,2
+11,"2,6",Geboorteregulering,Birth control,2
+12,"2,7",Scheiding,Divorce,2
+13,"2,8",Ongehuwde moeder; bastaardkinderen,Unmarried mother; bastard children,2
+14,"2,9",Vrije liefde,Free love,2
+15,"3,1",Publieke moraal,Public morality,3
+16,"4,1",Blasfemie,Blasphemy,4
+17,"4,2",Spot religie,Mock religion,4
+18,"4,3",Representatie geestelijken,Representation of clergy,4
+19,"4,4",Disrespect religieuze rituelen,Disrespect religious rituals,4
+20,"5,1",Schuttingwoorden,Obscene words,5
+21,"6,1",Schriftvervalsing,Signature falsification,6
+22,"6,2",Kidnapping,Kidnapping,6
+23,"6,3",Onvoering volwassenen,Kidnapping of adults,6
+24,"6,4",Inbraak,Burglary,6
+25,"6,5",Overval,Robbery,6
+26,"6,6",Diefstal,Theft,6
+27,"6,7",Brandstichting,Arson,6
+28,"6,8",Wraak,Revenge,6
+29,"6,9",Explosieven,Explosives,6
+30,"6,11",Vals spelen,Cheating,6
+31,"6,12",Chantage; omkoperij,Blackmail; bribery,6
+32,"6,13",Gokken,Gambling,6
+33,"6,14",Oplichting,Swindling,6
+34,"6,15",Smokkelen,Smuggling,6
+35,"6,16",Sabotage,Sabotage,6
+36,"6,17",Moord,Murder,6
+37,"6,18",Vandalisme,Vandalism,6
+38,"6,19",Liegen,Lying,6
+39,"6,21",Aanslag,Assault,6
+40,"7,1",Folteringen; verminkingen,Torture; mutilation,7
+41,"7,2",Geweld ten opzichte van vrouwen,Violence towards women,7
+42,"7,3",Geweld ten opzichte van dieren,Violence towards animals,7
+43,"7,4",Vechtscene,Fight scene,7
+44,"7,5",Vuurwapens in beeld,Firearms (graphic representation of),7
+45,"7,6",Andere dan vuurwapens in beeld,Other weapons than firearms,7
+46,"7,7",Geluid geweerschoten,Sound of gunshots,7
+47,"7,8",Executie,Execution,7
+48,"7,9",Geweld ten opzichte van niet-blanken,Violence towards non-whites,7
+49,"7,11",Duel,Duel,7
+50,"7,12",Oorlog; plundering,War; looting,7
+51,"7,13",Revolutie,Revolution,7
+52,"7,14",Geweld ten opzichte van kinderen,Violence towards children,7
+53,"8,1",Alcoholmisbruik,Alcohol abuse,8
+54,"8,2",Harddrugs,Hard drugs,8
+55,"8,3",Softdrugs,Soft Drugs,8
+56,"8,4",Drugsdeal,Drug Deal,8
+57,"8,5","Kinderen (alcohol, roken)","Children (alcohol, smoking)",8
+58,"9,1",Seksuele ontaarding,Sexual degeneration,9
+59,"10,1",Cabaret,Cabaret,10
+60,"10,2",Liefdesscene,Love scene,10
+61,"10,3",Interraciale liefdesscene,Interracial love scene,10
+62,"10,4",Seksuele hygiëne en venerische ziekten,Sexual hygiene and venereal diseases,10
+63,"10,5",Slaapkamer beeld,Bedroom scene,10
+64,"10,6","Vrouwenhandel, prostitutie","Women trafficking, prostitution",10
+65,"10,7",Passionele kus,Passionate kiss,10
+66,"10,8",Dans,Dance,10
+67,"10,9",Orgie,Orgy,10
+68,"10,11",Verleiding,Seduction,10
+69,"10,12",Liefdesscene (niet coreverhaal),Love scene (non-core story),10
+70,"10,13",Homoseksuele relatie,Homosexual relationship,10
+71,"10,14",Impotentie,Impotence,10
+72,"10,15",Seks met minderjarigen,Sex with minors,10
+73,"11,1",Verkrachting of poging tot,Rape or attempted rape,11
+74,"11,2",Ongewenste intimiteiten,Unwanted intimacies,11
+75,"11,3",Incest,Incest,11
+76,"12,1",Geboorte,Birth,12
+77,"12,2",Geslachtsdelen kind,Child genitalia,12
+78,"12,3","Bloed, wonden","Blood, wounds",12
+79,"12,4","Ontkleden, omkleden","Disrobing, changing clothes",12
+80,"12,5","Schaars gekleed, naakt","Scantily clad, naked",12
+81,"12,6",Tatoeage,Tattoo,12
+82,"12,7",Lijken,Corpses,12
+83,"12,8",Kadavers,Cadavers,12
+84,"12,9",Stervende,Dying,12
+85,"12,11",Zwangere vrouw,Pregnant woman,12
+86,"12,12",Travestie,Transvestism,12
+87,"12,13",Handicap; verminking,Disability; mutilation,12
+88,"13,1",Bloedige offers,Bloody sacrifices,13
+89,"13,2",Gewelddadige rituele praktijken,Violent ritual practices,13
+90,"13,3",Chirurgie,Surgery,13
+91,"13,4",Algemeen schrikwekkende verbeeldingen,Generally frightening depictions,13
+92,"14,2",Discriminatie vrouwen,Discrimination against women,14
+93,"14,3",Discriminatie gehandicapten,Discrimination against disabled people,14
+94,"14,4",Racisme,Racism,14
+95,"14,5",Slavernij,Slavery,14
+96,"15,1",Brand,Fire,15
+97,"15,2",Ongeval,Accident,15
+98,"15,3",Zelfmoord,Suicide,15
+99,"15,4",Verraad,Treason,15
+100,"15,6",Schulden,Debts,15
+101,"15,7",Politieke ideologie,Political ideology,15
+102,"15,8",Spionage,Espionage,15
+103,"15,9",Natuurramp,Natural disaster,15
+104,"15,13",Gevaarlijke stunts,Dangerous stunts,15
+105,"15,14",Bedrog,Deception,15
+106,"15,15",Euthanasie,Euthanasia,15
+107,"15,16",Elementen dood ongepast,Elements of death inappropriate,15
+108,"15,17",Lafheid,Cowardice,15
+109,"15,18",Bedrog; liegen,Deception; lying,15

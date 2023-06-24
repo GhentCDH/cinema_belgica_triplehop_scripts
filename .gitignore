@@ -3,7 +3,9 @@
 config.py
 
 config/*
+!data/
 data/*
+!data/fixtures
 export/*
 
 human_readable_config/entities.json
