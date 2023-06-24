@@ -452,11 +452,11 @@
                     },
                     {
                         "field": "$authors",
-                        "mutli": true
+                        "multi": true
                     },
                     {
                         "field": "$editors",
-                        "mutli": true
+                        "multi": true
                     },
                     {
                         "field": "$isbn"
